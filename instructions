@@ -5,4 +5,4 @@ step 4 : get abi and bytecode from compiled solidity code
 step 5 : create the transaction using transaction parameters
 step 6 : sign the transaction
 step 7 : send the transaction
-step 8
+step 8 : fetch data from smart contract
