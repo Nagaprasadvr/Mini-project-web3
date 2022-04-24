@@ -7,7 +7,7 @@ bytecode = None
 ganache = "http://127.0.0.1:8545"
 w3 = Web3(Web3.HTTPProvider(ganache))
 chain_id = 1337
-sender_prvkey = "d010b5689cd9930827f095382ef4cba427de97d318a6877ed8a3573ef16b41f8"
+sender_prvkey = "0xd010b5689cd9930827f095382ef4cba427de97d318a6877ed8a3573ef16b41f8"
 sender = "0x1AE44c9f7850457C4367eCc33a5f758124Bb8cb6"
 hash = "QmfCU7Hm5uCDoeKcN8AenawxMCKhuyMNmq3hW9cU3jTWGk"
 admin_address = "0x6d349a6fEc2c919d71F6659cD63a3c28053B9ce8"
@@ -65,9 +65,7 @@ def compileContract():
 
     # get abi
     global abi
-    abi = json.loads(
-        compiled_sol["contracts"]["IpfsHash.sol"]["IpfsHashContract"]["metadata"]
-    )["output"]["abi"]
+    abi = json.loads(compiled_sol["contracts"]["IpfsHash.sol"]["IpfsHashContract"]["metadata"])["output"]["abi"]
 
 
 def deployContract():
