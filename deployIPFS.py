@@ -42,7 +42,7 @@ def compileContract():
     compiled_sol = compile_standard(
         {
             "language": "Solidity",
-            "sources": {"IpfsHash.sol": {"content": ipfsFile}},
+            "sources": {"IpfsHashContract.sol": {"content": ipfsFile}},
             "settings": {
                 "outputSelection": {
                     "*": {
@@ -59,13 +59,13 @@ def compileContract():
 
     # get bytecode
     global bytecode
-    bytecode = compiled_sol["contracts"]["IpfsHash.sol"]["IpfsHashContract"]["evm"][
+    bytecode = compiled_sol["contracts"]["IpfsHashContract.sol"]["IpfsHashContract"]["evm"][
         "bytecode"
     ]["object"]
 
     # get abi
     global abi
-    abi = json.loads(compiled_sol["contracts"]["IpfsHash.sol"]["IpfsHashContract"]["metadata"])["output"]["abi"]
+    abi = json.loads(compiled_sol["contracts"]["IpfsHashContract.sol"]["IpfsHashContract"]["metadata"])["output"]["abi"]
 
 
 def deployContract():

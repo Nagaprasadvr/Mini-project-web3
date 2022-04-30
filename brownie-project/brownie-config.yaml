@@ -1,0 +1,4 @@
+dotenv: .env
+wallets:
+  key1: ${PRIVATE_KEYpub1}
+contracts : ${contractpath}

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class Etehreumweb3Config(AppConfig):
+class EthereumWeb3AppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'etehreumWeb3App'
+    name = 'ethereumWeb3App'
