@@ -1,0 +1,9 @@
+step 1 : Get a connection to ganache local blockchain
+step 2 : get the public and private keys of an account
+step 3 : compile the solidity code
+step 4 : get abi and bytecode from compiled solidity code
+step 5 : create the transaction using transaction parameters
+step 6 : sign the transaction
+step 7 : send the transaction
+step 8 : fetch data from smart contract
+
