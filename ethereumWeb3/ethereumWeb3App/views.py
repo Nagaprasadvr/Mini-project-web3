@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.contrib.auth.forms import UserCreationForm
-
-
+from .forms import CreateUserForm
+from django.shortcuts import redirect
+from django.contrib import messages
 # Create your views here.
 
 
@@ -14,12 +14,16 @@ def loginPage(request):
 
 
 def registerPage(request):
-    form = UserCreationForm()
+    form = CreateUserForm()
     context = {'form':form}
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CreateUserForm(request.POST)
+
         if form.is_valid():
             form.save()
+            user = form.cleaned_data.get('username')
+            messages.success(request,"Account was created for :" + user )
+            return redirect('login')
 
     return render(request, "ethereumWeb3App/register.html", context)
 
