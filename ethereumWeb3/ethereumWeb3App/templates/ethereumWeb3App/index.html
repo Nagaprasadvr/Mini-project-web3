@@ -53,10 +53,10 @@
           <ul>
             <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
             <li><a class="nav-link scrollto" href="#about">About</a></li>
-            <li><a class="nav-link scrollto " href="#portfolio">Signup</a></li>
-            <li><a class="nav-link scrollto" href="#pricing">Login</a></li>
+            <li><a class="nav-link scrollto " href="{% url 'Signup' %}">Signup</a></li>
+            <li><a class="nav-link scrollto" href="{% url 'login' %}">Login</a></li>
             <li><a class="nav-link scrollto" href="#team">Team</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
             <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
@@ -66,7 +66,7 @@
     </header><!-- End Header -->
     <!-- ======= Hero Section ======= -->
     <section>
-        <img src="{% static 'ethereumWeb3App/assets/img/base.jpg' %}" style="height:113vh;width:auto;display:flex;align-items:center;justify-content:center ">
+        <img src="{% static 'ethereumWeb3App/assets/img/homebase.jpg' %}" style="height:auto ;width:100%;">
     
     </section><!-- End Hero -->
 
@@ -210,13 +210,14 @@
           <div class="section-title" data-aos="fade-down">
             <span>Services</span>
             <h2>Services</h2>
-            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+            <p>We provide Decentralized data storing service for any form of data like image , files , video , website etc..</p>
           </div>
 
           <div class="row">
             <div class="col-md-6">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                <i class="bi bi-briefcase" style="color: #0ea5e0;"></i>
+                <i class="bi bi-briefcase" style="
+                color: #0ea5e0;"></i>
                 <h4><a href="#">Lorem Ipsum</a></h4>
                 <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
               </div>
