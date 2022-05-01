@@ -44,7 +44,7 @@
       <div class="container d-flex align-items-center justify-content-between">
 
         <div class="logo">
-          <h1 class="text-light"><a href="index.html"><span>secure-drop</span></a></h1>
+          <h1 class="text-light"><a href="{% url 'index' %}"><span>secure-drop</span></a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
@@ -56,8 +56,11 @@
             <li><a class="nav-link scrollto " href="{% url 'Signup' %}">Signup</a></li>
             <li><a class="nav-link scrollto" href="{% url 'login' %}">Login</a></li>
             <li><a class="nav-link scrollto" href="#team">Team</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
             <li><a href="{% url 'blog' %}">Blog</a></li>
             <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            <li>Hello, </li>
+
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
