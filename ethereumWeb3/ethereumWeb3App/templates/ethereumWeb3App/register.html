@@ -110,11 +110,12 @@
 					</form>
 				</div>
                 {% for message in messages %}
-					{{message}}
+				<br>
+					<p style="color:white; font-size:20px;" align="middle">{{message}}</p>
 				{% endfor %}
 				<div class="mt-4">
-					<div class="d-flex justify-content-center links">
-						Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
+					<div class="d-flex justify-content-center links" style="color:white; font-size:20px;">
+						Already have an account? <a style= "color: white; font-size:20px;" href="{% url 'login' %}" class="ml-2">Login</a>
 					</div>
 				</div>
 			</div>

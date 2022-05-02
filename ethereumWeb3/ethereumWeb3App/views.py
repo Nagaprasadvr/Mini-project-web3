@@ -14,13 +14,13 @@ def index(request):
 def loginPage(request):
     context = {}
     if request.method == 'POST':
-        username = request.POST.get('username')
+        username = str(request.POST.get('username'))
         password = request.POST.get('password')
 
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('index')
+            return userView(request, (username[0].upper()+username[1:]))
         else:
             messages.info(request, "Username or password is incorrect")
 
@@ -68,6 +68,10 @@ def registerPage(request):
 
 def home(request):
     return render(request, "ethereumWeb3App/index.html")
+
+
+def userView(request, username):
+    return render(request,"ethereumWeb3App/userview.html",  {"username": username})
 
 
 def blog(request):
