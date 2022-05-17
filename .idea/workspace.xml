@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04995b27-adda-46e0-9f19-07a5598e7980" name="Changes" comment="login signup done">
-      <change afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/base2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethereumWeb3/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/blog.html" afterDir="false" />
-    </list>
+    <list default="true" id="04995b27-adda-46e0-9f19-07a5598e7980" name="Changes" comment="blog page" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651409790873</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="blog page">
+      <created>1652775255424</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1652775255424</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,6 +232,7 @@
     <MESSAGE value="changes" />
     <MESSAGE value="login signup" />
     <MESSAGE value="login signup done" />
-    <option name="LAST_COMMIT_MESSAGE" value="login signup done" />
+    <MESSAGE value="blog page" />
+    <option name="LAST_COMMIT_MESSAGE" value="blog page" />
   </component>
 </project>
