@@ -1,0 +1,584 @@
+Index: ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n{% load static %}\r\n<title>SECURE-DROP</title>\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\">\r\n\r\n  <title>Plato Bootstrap Template - Index</title>\r\n  <meta content=\"\" name=\"description\">\r\n  <meta content=\"\" name=\"keywords\">\r\n\r\n  <!-- Favicons -->\r\n  <link href=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn85O5EOk3b_n0QaoJWjD5GubF5CZ4bzRTLg&usqp=CAU\" rel=\"icon\">\r\n  <link href=\"{% static 'ethereumWeb3App/assets/img/apple-touch-icon.png' %}\" rel=\"apple-touch-icon\">\r\n\r\n  <!-- Google Fonts -->\r\n  \r\n  <link href=\"https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i\" rel=\"stylesheet\">\r\n\r\n  <!-- Vendor CSS Files -->\r\n  <link href=\"{% static 'ethereumWeb3App/assets/vendor/aos/aos.css' %}\" rel=\"stylesheet\">\r\n  <link href=\"{% static 'ethereumWeb3App/assets/vendor/bootstrap/css/bootstrap.min.css' %}\" rel=\"stylesheet\">\r\n  <link href=\"{% static 'ethereumWeb3App/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}\" rel=\"stylesheet\">\r\n  <link href=\"{% static 'ethereumWeb3App/assets/vendor/boxicons/css/boxicons.min.css' %}\" rel=\"stylesheet\">\r\n  <link href=\"{% static 'ethereumWeb3App/assets/vendor/glightbox/css/glightbox.min.css' %}\" rel=\"stylesheet\">\r\n  <link href=\"{% static 'ethereumWeb3app/assets/vendor/swiper/swiper-bundle.min.css' %}\" rel=\"stylesheet\">\r\n\r\n  <!-- Template Main CSS File -->\r\n  <link href=\"{% static 'ethereumWeb3App/assets/css/style.css' %}\" rel=\"stylesheet\">\r\n\r\n  <!-- =======================================================\r\n  * Template Name: Plato - v4.7.0\r\n  * Template URL: https://bootstrapmade.com/plato-responsive-bootstrap-website-template/\r\n  * Author: BootstrapMade.com\r\n  * License: https://bootstrapmade.com/license/\r\n  ======================================================== -->\r\n</head>\r\n\r\n<body>\r\n  <div class=\"wrap\">\r\n     <!-- ======= Header ======= -->\r\n     <header id=\"header\" class=\"d-flex align-items-center\">\r\n      <div class=\"container d-flex align-items-center justify-content-between\">\r\n\r\n        <div class=\"logo\">\r\n          <h1 class=\"text-light\"><a href=\"index.html\"><span>secure-drop</span></a></h1>\r\n          <!-- Uncomment below if you prefer to use an image logo -->\r\n          <!-- <a href=\"index.html\"><img src=\"assets/img/logo.png\" alt=\"\" class=\"img-fluid\"></a>-->\r\n        </div>\r\n\r\n        <nav id=\"navbar\" class=\"navbar\">\r\n          <ul>\r\n            <li><a class=\"nav-link scrollto \" href=\"{% url 'index' %}\">Home</a></li>\r\n            <li><a class=\"nav-link scrollto\" href=\"#about\">About</a></li>\r\n            <li><a class=\"nav-link scrollto \" href=\"{% url 'Signup' %}\">Signup</a></li>\r\n            <li><a class=\"nav-link scrollto\" href=\"{% url 'login' %}\">Login</a></li>\r\n            <li><a class=\"nav-link scrollto\" href=\"#team\">Team</a></li>\r\n            <li><a href=\"{% url 'logout' %}\">Logout</a></li>\r\n            <li><a href=\"{% url 'blog' %}\">Blog</a></li>\r\n            <li><a class=\"nav-link scrollto\" href=\"#contact\">Contact</a></li>\r\n          </ul>\r\n          <i class=\"bi bi-list mobile-nav-toggle\"></i>\r\n        </nav><!-- .navbar -->\r\n\r\n      </div>\r\n    </header><!-- End Header -->\r\n    <!-- ======= Hero Section ======= -->\r\n    <section>\r\n        <img src=\"{% static 'ethereumWeb3App/assets/img/homebase.jpg' %}\" style=\"height:auto ;width:100%;\">\r\n    \r\n    </section><!-- End Hero -->\r\n\r\n   \r\n\r\n    <main id=\"main\">\r\n\r\n      <!-- ======= About Section ======= -->\r\n      <section id=\"about\" class=\"about\">\r\n        <div class=\"container\">\r\n\r\n          <div class=\"row\">\r\n            <div style=\"background-image: url({% static 'ethereumWeb3App/assets/img/about.jpg' %})\" data-aos=\"fade-right\" class=\"image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start\"></div>\r\n            <div class=\"col-xl-7 pt-4 pt-lg-0 d-flex align-items-stretch\">\r\n              <div class=\"content d-flex flex-column justify-content-center\" data-aos=\"fade-left\">\r\n                <h3>Voluptatem dignissimos provident quasi</h3>\r\n                <p>\r\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit\r\n                </p>\r\n                <div class=\"row\">\r\n                  <div class=\"col-md-6 icon-box\" data-aos=\"zoom-in\" data-aos-delay=\"100\">\r\n                    <i class=\"bx bx-receipt\"></i>\r\n                    <h4>Corporis voluptates sit</h4>\r\n                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>\r\n                  </div>\r\n                  <div class=\"col-md-6 icon-box\" data-aos=\"zoom-in\" data-aos-delay=\"200\">\r\n                    <i class=\"bx bx-cube-alt\"></i>\r\n                    <h4>Ullamco laboris nisi</h4>\r\n                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>\r\n                  </div>\r\n                  <div class=\"col-md-6 icon-box\" data-aos=\"zoom-in\" data-aos-delay=\"300\">\r\n                    <i class=\"bx bx-images\"></i>\r\n                    <h4>Labore consequatur</h4>\r\n                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>\r\n                  </div>\r\n                  <div class=\"col-md-6 icon-box\" data-aos=\"zoom-in\" data-aos-delay=\"400\">\r\n                    <i class=\"bx bx-shield\"></i>\r\n                    <h4>Beatae veritatis</h4>\r\n                    <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>\r\n                  </div>\r\n                </div>\r\n              </div><!-- End .content-->\r\n            </div>\r\n          </div>\r\n\r\n        </div>\r\n      </section><!-- End About Section -->\r\n\r\n      <!-- ======= Clients Section ======= -->\r\n      <section id=\"clients\" class=\"clients\">\r\n        <div class=\"container\">\r\n\r\n          <div class=\"row\">\r\n\r\n            <div class=\"col-lg-2 col-md-4 col-6\">\r\n              <img src=\"{% static 'ethereumWeb3App/assets/img/clients/client-1.png' %}\" class=\"img-fluid\" alt=\"\" data-aos=\"zoom-in\">\r\n            </div>\r\n\r\n            <div class=\"col-lg-2 col-md-4 col-6\">\r\n              <img src=\"{% static 'ethereumWeb3App/assets/img/clients/client-2.png' %}\" class=\"img-fluid\" alt=\"\" data-aos=\"zoom-in\" data-aos-delay=\"100\">\r\n            </div>\r\n\r\n            <div class=\"col-lg-2 col-md-4 col-6\">\r\n              <img src=\"{% static 'ethereumWeb3App/assets/img/clients/client-3.png' %}\" class=\"img-fluid\" alt=\"\" data-aos=\"zoom-in\" data-aos-delay=\"200\">\r\n            </div>\r\n\r\n            <div class=\"col-lg-2 col-md-4 col-6\">\r\n              <img src=\"{% static 'ethereumWeb3App/assets/img/clients/client-4.png' %}\" class=\"img-fluid\" alt=\"\" data-aos=\"zoom-in\" data-aos-delay=\"300\">\r\n            </div>\r\n\r\n            <div class=\"col-lg-2 col-md-4 col-6\">\r\n              <img src=\"{% static 'ethereumWeb3App/assets/img/clients/client-5.png' %}\" class=\"img-fluid\" alt=\"\" data-aos=\"zoom-in\" data-aos-delay=\"400\">\r\n            </div>\r\n\r\n            <div class=\"col-lg-2 col-md-4 col-6\">\r\n              <img src=\"{% static 'ethereumWeb3App/assets/img/clients/client-6.png' %}\" class=\"img-fluid\" alt=\"\" data-aos=\"zoom-in\" data-aos-delay=\"500\">\r\n            </div>\r\n\r\n          </div>\r\n\r\n        </div>\r\n      </section><!-- End Clients Section -->\r\n\r\n      <!-- ======= Features Section ======= -->\r\n      <section id=\"features\" class=\"features\">\r\n        <div class=\"container\">\r\n\r\n          <div class=\"row\">\r\n            <div class=\"col-lg-4 col-md-6 d-flex align-items-stretch\">\r\n              <div class=\"card\" data-aos=\"fade-up\">\r\n                <img src=\"{% static 'ethereumWeb3App/assets/img/features-1.jpg' %}\" class=\"card-img-top\" alt=\"...\">\r\n                <div class=\"card-body\">\r\n                  <i class=\"bx bx-tachometer\"></i>\r\n                  <h5 class=\"card-title\"><a href=\"\">Our Mission</a></h5>\r\n                  <p class=\"card-text\">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-lg-4 col-md-6 mt-5 mt-md-0 d-flex align-items-stretch\">\r\n              <div class=\"card\" data-aos=\"fade-up\" data-aos-delay=\"150\">\r\n                <img src=\"{% static 'ethereumWeb3App/assets/img/features-2.jpg' %}\" class=\"card-img-top\" alt=\"...\">\r\n                <div class=\"card-body\">\r\n                  <i class=\"bx bx-file\"></i>\r\n                  <h5 class=\"card-title\"><a href=\"\">Our Plan</a></h5>\r\n                  <p class=\"card-text\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-lg-4 col-md-6 mt-5 mt-lg-0 d-flex align-items-stretch\">\r\n              <div class=\"card\" data-aos=\"fade-up\" data-aos-delay=\"300\">\r\n                <img src=\"{% static 'ethereumWeb3App/assets/img/features-3.jpg' %}\" class=\"card-img-top\" alt=\"...\">\r\n                <div class=\"card-body\">\r\n                  <i class=\"bx bx-show\"></i>\r\n                  <h5 class=\"card-title\"><a href=\"\">Our Vision</a></h5>\r\n                  <p class=\"card-text\">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. </p>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n        </div>\r\n      </section><!-- End Features Section -->\r\n\r\n      <!-- ======= Cta Section ======= -->\r\n      <section id=\"cta\" class=\"cta\">\r\n        <div class=\"container\">\r\n\r\n          <div class=\"text-center\" data-aos=\"zoom-in\">\r\n            <h3>Call To Action</h3>\r\n            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\r\n            <a class=\"cta-btn\" href=\"#\">Call To Action</a>\r\n          </div>\r\n\r\n        </div>\r\n      </section><!-- End Cta Section -->\r\n\r\n      <!-- ======= Services Section ======= -->\r\n      <section id=\"services\" class=\"services\">\r\n        <div class=\"container\">\r\n\r\n          <div class=\"section-title\" data-aos=\"fade-down\">\r\n            <span>Services</span>\r\n            <h2>Services</h2>\r\n            <p>We provide Decentralized data storing service for any form of data like image , files , video , website etc..</p>\r\n          </div>\r\n\r\n          <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n              <div class=\"icon-box\" data-aos=\"fade-up\" data-aos-delay=\"100\">\r\n                <i class=\"bi bi-briefcase\" style=\"\r\n                color: #0ea5e0;\"></i>\r\n                <h4><a href=\"#\">Lorem Ipsum</a></h4>\r\n                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-md-6\">\r\n              <div class=\"icon-box\" data-aos=\"fade-up\" data-aos-delay=\"200\">\r\n                <i class=\"bi bi-card-checklist\" style=\"color: #07cc70;\"></i>\r\n                <h4><a href=\"#\">Dolor Sitema</a></h4>\r\n                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-md-6\">\r\n              <div class=\"icon-box\" data-aos=\"fade-up\" data-aos-delay=\"300\">\r\n                <i class=\"bi bi-bar-chart\" style=\"color: #e40373;\"></i>\r\n                <h4><a href=\"#\">Sed ut perspiciatis</a></h4>\r\n                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-md-6\">\r\n              <div class=\"icon-box\" data-aos=\"fade-up\" data-aos-delay=\"400\">\r\n                <i class=\"bi bi-binoculars\" style=\"color: #f0b103;\"></i>\r\n                <h4><a href=\"#\">Nemo Enim</a></h4>\r\n                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-md-6\">\r\n              <div class=\"icon-box\" data-aos=\"fade-up\" data-aos-delay=\"500\">\r\n                <i class=\"bi bi-brightness-high\" style=\"color: #3145fa;\"></i>\r\n                <h4><a href=\"#\">Magni Dolore</a></h4>\r\n                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-md-6\">\r\n              <div class=\"icon-box\" data-aos=\"fade-up\" data-aos-delay=\"600\">\r\n                <i class=\"bi bi-calendar4-week\" style=\"color: #a00098;\"></i>\r\n                <h4><a href=\"#\">Eiusmod Tempor</a></h4>\r\n                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n        </div>\r\n      </section><!-- End Services Section -->\r\n      <!-- ======= Testimonials Section ======= -->\r\n      <section id=\"testimonials\" class=\"testimonials\">\r\n        <div class=\"container position-relative\">\r\n\r\n          <div class=\"testimonials-slider swiper\" data-aos=\"fade-up\" data-aos-delay=\"100\">\r\n            <div class=\"swiper-wrapper\">\r\n\r\n              <div class=\"swiper-slide\">\r\n                <div class=\"testimonial-item\">\r\n                  <img src=\"{% static 'ethereumWeb3App/assets/img/testimonials/testimonials-1.jpg' %}\" class=\"testimonial-img\" alt=\"\">\r\n                  <h3>Saul Goodman</h3>\r\n                  <h4>Ceo &amp; Founder</h4>\r\n                  <p>\r\n                    <i class=\"bx bxs-quote-alt-left quote-icon-left\"></i>\r\n                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.\r\n                    <i class=\"bx bxs-quote-alt-right quote-icon-right\"></i>\r\n                  </p>\r\n                </div>\r\n              </div><!-- End testimonial item -->\r\n\r\n              <div class=\"swiper-slide\">\r\n                <div class=\"testimonial-item\">\r\n                  <img src=\"{% static 'ethereumWeb3App/assets/img/testimonials/testimonials-2.jpg' %}\" class=\"testimonial-img\" alt=\"\">\r\n                  <h3>Sara Wilsson</h3>\r\n                  <h4>Designer</h4>\r\n                  <p>\r\n                    <i class=\"bx bxs-quote-alt-left quote-icon-left\"></i>\r\n                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.\r\n                    <i class=\"bx bxs-quote-alt-right quote-icon-right\"></i>\r\n                  </p>\r\n                </div>\r\n              </div><!-- End testimonial item -->\r\n\r\n              <div class=\"swiper-slide\">\r\n                <div class=\"testimonial-item\">\r\n                  <img src=\"{% static 'ethereumWeb3App/assets/img/testimonials/testimonials-3.jpg' %}\" class=\"testimonial-img\" alt=\"\">\r\n                  <h3>Jena Karlis</h3>\r\n                  <h4>Store Owner</h4>\r\n                  <p>\r\n                    <i class=\"bx bxs-quote-alt-left quote-icon-left\"></i>\r\n                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.\r\n                    <i class=\"bx bxs-quote-alt-right quote-icon-right\"></i>\r\n                  </p>\r\n                </div>\r\n              </div><!-- End testimonial item -->\r\n\r\n              <div class=\"swiper-slide\">\r\n                <div class=\"testimonial-item\">\r\n                  <img src=\"{% static 'ethereumWeb3App/assets/img/testimonials/testimonials-4.jpg' %}\" class=\"testimonial-img\" alt=\"\">\r\n                  <h3>Matt Brandon</h3>\r\n                  <h4>Freelancer</h4>\r\n                  <p>\r\n                    <i class=\"bx bxs-quote-alt-left quote-icon-left\"></i>\r\n                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.\r\n                    <i class=\"bx bxs-quote-alt-right quote-icon-right\"></i>\r\n                  </p>\r\n                </div>\r\n              </div><!-- End testimonial item -->\r\n\r\n              <div class=\"swiper-slide\">\r\n                <div class=\"testimonial-item\">\r\n                  <img src=\"{% static 'ethereumWeb3App/assets/img/testimonials/testimonials-5.jpg' %}\" class=\"testimonial-img\" alt=\"\">\r\n                  <h3>John Larson</h3>\r\n                  <h4>Entrepreneur</h4>\r\n                  <p>\r\n                    <i class=\"bx bxs-quote-alt-left quote-icon-left\"></i>\r\n                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.\r\n                    <i class=\"bx bxs-quote-alt-right quote-icon-right\"></i>\r\n                  </p>\r\n                </div>\r\n              </div><!-- End testimonial item -->\r\n\r\n            </div>\r\n            <div class=\"swiper-pagination\"></div>\r\n          </div>\r\n\r\n        </div>\r\n      </section><!-- End Testimonials Section -->\r\n\r\n      <!-- ======= Team Section ======= -->\r\n      <section id=\"team\" class=\"team\">\r\n        <div class=\"container\">\r\n\r\n          <div class=\"section-title\" data-aos=\"fade-down\">\r\n            <span>Team</span>\r\n            <h2>Team</h2>\r\n            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>\r\n          </div>\r\n\r\n          <div class=\"row\">\r\n\r\n            <div class=\"col-xl-3 col-lg-4 col-md-6\">\r\n              <div class=\"member\" data-aos=\"fade-up\" data-aos-delay=\"100\">\r\n                <img src=\"{% static 'ethereumWeb3App/assets/img/team/team-1.jpg' %}\" class=\"img-fluid\" alt=\"\">\r\n                <div class=\"member-info\">\r\n                  <div class=\"member-info-content\">\r\n                    <h4>Walter White</h4>\r\n                    <span>Chief Executive Officer</span>\r\n                  </div>\r\n                  <div class=\"social\">\r\n                    <a href=\"\"><i class=\"bi bi-twitter\"></i></a>\r\n                    <a href=\"\"><i class=\"bi bi-facebook\"></i></a>\r\n                    <a href=\"\"><i class=\"bi bi-instagram\"></i></a>\r\n                    <a href=\"\"><i class=\"bi bi-linkedin\"></i></a>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"col-xl-3 col-lg-4 col-md-6 mt-4 mt-md-0\">\r\n              <div class=\"member\" data-aos=\"fade-up\" data-aos-delay=\"200\">\r\n                <img src=\"{% static 'ethereumWeb3App/assets/img/team/team-2.jpg' %}\" class=\"img-fluid\" alt=\"\">\r\n                <div class=\"member-info\">\r\n                  <div class=\"member-info-content\">\r\n                    <h4>Sarah Jhonson</h4>\r\n                    <span>Product Manager</span>\r\n                  </div>\r\n                  <div class=\"social\">\r\n                    <a href=\"\"><i class=\"bi bi-twitter\"></i></a>\r\n                    <a href=\"\"><i class=\"bi bi-facebook\"></i></a>\r\n                    <a href=\"\"><i class=\"bi bi-instagram\"></i></a>\r\n                    <a href=\"\"><i class=\"bi bi-linkedin\"></i></a>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"col-xl-3 col-lg-4 col-md-6 mt-4 mt-lg-0\" data-wow-delay=\"0.2s\">\r\n              <div class=\"member\" data-aos=\"fade-up\" data-aos-delay=\"300\">\r\n                <img src=\"{% static 'ethereumWeb3App/assets/img/team/team-3.jpg' %}\" class=\"img-fluid\" alt=\"\">\r\n                <div class=\"member-info\">\r\n                  <div class=\"member-info-content\">\r\n                    <h4>William Anderson</h4>\r\n                    <span>CTO</span>\r\n                  </div>\r\n                  <div class=\"social\">\r\n                    <a href=\"\"><i class=\"bi bi-twitter\"></i></a>\r\n                    <a href=\"\"><i class=\"bi bi-facebook\"></i></a>\r\n                    <a href=\"\"><i class=\"bi bi-instagram\"></i></a>\r\n                    <a href=\"\"><i class=\"bi bi-linkedin\"></i></a>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div class=\"col-xl-3 col-lg-4 col-md-6 mt-4 mt-lg-0\" data-wow-delay=\"0.3s\">\r\n              <div class=\"member\" data-aos=\"fade-up\" data-aos-delay=\"400\">\r\n                <img src=\"{% static 'ethereumWeb3App/assets/img/team/team-4.jpg' %}\" class=\"img-fluid\" alt=\"\">\r\n                <div class=\"member-info\">\r\n                  <div class=\"member-info-content\">\r\n                    <h4>Amanda Jepson</h4>\r\n                    <span>Accountant</span>\r\n                  </div>\r\n                  <div class=\"social\">\r\n                    <a href=\"\"><i class=\"bi bi-twitter\"></i></a>\r\n                    <a href=\"\"><i class=\"bi bi-facebook\"></i></a>\r\n                    <a href=\"\"><i class=\"bi bi-instagram\"></i></a>\r\n                    <a href=\"\"><i class=\"bi bi-linkedin\"></i></a>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n          </div>\r\n\r\n        </div>\r\n      </section><!-- End Team Section -->\r\n\r\n      <!-- ======= F.A.Q Section ======= -->\r\n      <section id=\"faq\" class=\"faq\">\r\n        <div class=\"container\">\r\n\r\n          <div class=\"section-title\" data-aos=\"fade-down\">\r\n            <span>F.A.Q</span>\r\n            <h2>F.A.Q</h2>\r\n            <p>Frequently Asked Questions</p>\r\n          </div>\r\n\r\n          <div class=\"faq-list\">\r\n            <ul>\r\n              <li data-aos=\"fade-up\">\r\n                <i class=\"bx bx-help-circle icon-help\"></i> <a data-bs-toggle=\"collapse\" class=\"collapse\" data-bs-target=\"#faq-list-1\">Non consectetur a erat nam at lectus urna duis? <i class=\"bx bx-chevron-down icon-show\"></i><i class=\"bx bx-chevron-up icon-close\"></i></a>\r\n                <div id=\"faq-list-1\" class=\"collapse show\" data-bs-parent=\".faq-list\">\r\n                  <p>\r\n                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.\r\n                  </p>\r\n                </div>\r\n              </li>\r\n\r\n              <li data-aos=\"fade-up\" data-aos-delay=\"100\">\r\n                <i class=\"bx bx-help-circle icon-help\"></i> <a data-bs-toggle=\"collapse\" data-bs-target=\"#faq-list-2\" class=\"collapsed\">Feugiat scelerisque varius morbi enim nunc? <i class=\"bx bx-chevron-down icon-show\"></i><i class=\"bx bx-chevron-up icon-close\"></i></a>\r\n                <div id=\"faq-list-2\" class=\"collapse\" data-bs-parent=\".faq-list\">\r\n                  <p>\r\n                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.\r\n                  </p>\r\n                </div>\r\n              </li>\r\n\r\n              <li data-aos=\"fade-up\" data-aos-delay=\"200\">\r\n                <i class=\"bx bx-help-circle icon-help\"></i> <a data-bs-toggle=\"collapse\" data-bs-target=\"#faq-list-3\" class=\"collapsed\">Dolor sit amet consectetur adipiscing elit? <i class=\"bx bx-chevron-down icon-show\"></i><i class=\"bx bx-chevron-up icon-close\"></i></a>\r\n                <div id=\"faq-list-3\" class=\"collapse\" data-bs-parent=\".faq-list\">\r\n                  <p>\r\n                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis\r\n                  </p>\r\n                </div>\r\n              </li>\r\n\r\n              <li data-aos=\"fade-up\" data-aos-delay=\"300\">\r\n                <i class=\"bx bx-help-circle icon-help\"></i> <a data-bs-toggle=\"collapse\" data-bs-target=\"#faq-list-4\" class=\"collapsed\">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class=\"bx bx-chevron-down icon-show\"></i><i class=\"bx bx-chevron-up icon-close\"></i></a>\r\n                <div id=\"faq-list-4\" class=\"collapse\" data-bs-parent=\".faq-list\">\r\n                  <p>\r\n                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.\r\n                  </p>\r\n                </div>\r\n              </li>\r\n\r\n              <li data-aos=\"fade-up\" data-aos-delay=\"400\">\r\n                <i class=\"bx bx-help-circle icon-help\"></i> <a data-bs-toggle=\"collapse\" data-bs-target=\"#faq-list-5\" class=\"collapsed\">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class=\"bx bx-chevron-down icon-show\"></i><i class=\"bx bx-chevron-up icon-close\"></i></a>\r\n                <div id=\"faq-list-5\" class=\"collapse\" data-bs-parent=\".faq-list\">\r\n                  <p>\r\n                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.\r\n                  </p>\r\n                </div>\r\n              </li>\r\n\r\n            </ul>\r\n          </div>\r\n\r\n        </div>\r\n      </section><!-- End F.A.Q Section -->\r\n\r\n      <!-- ======= Contact Us Section ======= -->\r\n      <section id=\"contact\" class=\"contact\">\r\n        <div class=\"container\">\r\n\r\n          <div class=\"section-title\" data-aos=\"fade-down\">\r\n            <span>Contact Us</span>\r\n            <h2>Contact Us</h2>\r\n          </div>\r\n\r\n          <div class=\"row justify-content-center\">\r\n            <div class=\"col-lg-4 col-md-12\" data-aos=\"fade-up\" data-aos-delay=\"100\">\r\n              <div class=\"info-box\">\r\n                <i class=\"bx bx-map\"></i>\r\n                <h3>Our Address</h3>\r\n                <p>A108 Adam Street, New York, NY 535022</p>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-lg-4 col-md-6 mt-4 mt-lg-0\" data-aos=\"fade-up\" data-aos-delay=\"200\">\r\n              <div class=\"info-box\">\r\n                <i class=\"bx bx-envelope\"></i>\r\n                <h3>Email Us</h3>\r\n                <p>info@example.com<br>contact@example.com</p>\r\n              </div>\r\n            </div>\r\n            <div class=\"col-lg-4 col-md-6 mt-4 mt-lg-0\" data-aos=\"fade-up\" data-aos-delay=\"300\">\r\n              <div class=\"info-box\">\r\n                <i class=\"bx bx-phone-call\"></i>\r\n                <h3>Call Us</h3>\r\n                <p>+1 5589 55488 55<br>+1 6678 254445 41</p>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <form action=\"forms/contact.php\" method=\"post\" role=\"form\" class=\"php-email-form mt-4\" data-aos=\"fade-up\" data-aos-delay=\"400\">\r\n            <div class=\"row\">\r\n              <div class=\"col-md-6 form-group\">\r\n                <input type=\"text\" name=\"name\" class=\"form-control\" id=\"name\" placeholder=\"Your Name\" required>\r\n              </div>\r\n              <div class=\"col-md-6 form-group mt-3 mt-md-0\">\r\n                <input type=\"email\" class=\"form-control\" name=\"email\" id=\"email\" placeholder=\"Your Email\" required>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group mt-3\">\r\n              <input type=\"text\" class=\"form-control\" name=\"subject\" id=\"subject\" placeholder=\"Subject\" required>\r\n            </div>\r\n            <div class=\"form-group mt-3\">\r\n              <textarea class=\"form-control\" name=\"message\" rows=\"5\" placeholder=\"Message\" required></textarea>\r\n            </div>\r\n            <div class=\"my-3\">\r\n              <div class=\"loading\">Loading</div>\r\n              <div class=\"error-message\"></div>\r\n              <div class=\"sent-message\">Your message has been sent. Thank you!</div>\r\n            </div>\r\n            <div class=\"text-center\"><button type=\"submit\">Send Message</button></div>\r\n          </form>\r\n\r\n        </div>\r\n      </section><!-- End Contact Us Section -->\r\n\r\n    </main><!-- End #main -->\r\n\r\n    <!-- ======= Footer ======= -->\r\n    <footer id=\"footer\">\r\n\r\n      <div class=\"footer-newsletter\">\r\n        <div class=\"container\">\r\n          <div class=\"row justify-content-center\">\r\n            <div class=\"col-lg-6\">\r\n              <h4>Join Our Newsletter</h4>\r\n              <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>\r\n              <form action=\"\" method=\"post\">\r\n                <input type=\"email\" name=\"email\"><input type=\"submit\" value=\"Subscribe\">\r\n              </form>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"footer-top\">\r\n        <div class=\"container\">\r\n          <div class=\"row\">\r\n\r\n            <div class=\"col-lg-3 col-md-6 footer-contact\">\r\n              <h3>Plato</h3>\r\n              <p>\r\n                A108 Adam Street <br>\r\n                New York, NY 535022<br>\r\n                United States <br><br>\r\n                <strong>Phone:</strong> +1 5589 55488 55<br>\r\n                <strong>Email:</strong> info@example.com<br>\r\n              </p>\r\n            </div>\r\n\r\n            <div class=\"col-lg-3 col-md-6 footer-links\">\r\n              <h4>Useful Links</h4>\r\n              <ul>\r\n                <li><i class=\"bx bx-chevron-right\"></i> <a href=\"#\">Home</a></li>\r\n                <li><i class=\"bx bx-chevron-right\"></i> <a href=\"#\">About us</a></li>\r\n                <li><i class=\"bx bx-chevron-right\"></i> <a href=\"#\">Services</a></li>\r\n                <li><i class=\"bx bx-chevron-right\"></i> <a href=\"#\">Terms of service</a></li>\r\n                <li><i class=\"bx bx-chevron-right\"></i> <a href=\"#\">Privacy policy</a></li>\r\n              </ul>\r\n            </div>\r\n\r\n            <div class=\"col-lg-3 col-md-6 footer-links\">\r\n              <h4>Our Services</h4>\r\n              <ul>\r\n                <li><i class=\"bx bx-chevron-right\"></i> <a href=\"#\">Web Design</a></li>\r\n                <li><i class=\"bx bx-chevron-right\"></i> <a href=\"#\">Web Development</a></li>\r\n                <li><i class=\"bx bx-chevron-right\"></i> <a href=\"#\">Product Management</a></li>\r\n                <li><i class=\"bx bx-chevron-right\"></i> <a href=\"#\">Marketing</a></li>\r\n                <li><i class=\"bx bx-chevron-right\"></i> <a href=\"#\">Graphic Design</a></li>\r\n              </ul>\r\n            </div>\r\n\r\n            <div class=\"col-lg-3 col-md-6 footer-links\">\r\n              <h4>Our Social Networks</h4>\r\n              <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>\r\n              <div class=\"social-links mt-3\">\r\n                <a href=\"#\" class=\"twitter\"><i class=\"bx bxl-twitter\"></i></a>\r\n                <a href=\"#\" class=\"facebook\"><i class=\"bx bxl-facebook\"></i></a>\r\n                <a href=\"#\" class=\"instagram\"><i class=\"bx bxl-instagram\"></i></a>\r\n                <a href=\"#\" class=\"google-plus\"><i class=\"bx bxl-skype\"></i></a>\r\n                <a href=\"#\" class=\"linkedin\"><i class=\"bx bxl-linkedin\"></i></a>\r\n              </div>\r\n            </div>\r\n\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"container py-4\">\r\n        <div class=\"copyright\">\r\n          &copy; Copyright <strong><span>Plato</span></strong>. All Rights Reserved\r\n        </div>\r\n        <div class=\"credits\">\r\n          <!-- All the links in the footer should remain intact. -->\r\n          <!-- You can delete the links only if you purchased the pro version. -->\r\n          <!-- Licensing information: https://bootstrapmade.com/license/ -->\r\n          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/plato-responsive-bootstrap-website-template/ -->\r\n          Designed by <a href=\"https://bootstrapmade.com/\">BootstrapMade</a>\r\n        </div>\r\n      </div>\r\n    </footer><!-- End Footer -->\r\n\r\n  </div>\r\n\r\n  <a href=\"#\" class=\"back-to-top d-flex align-items-center justify-content-center\"><i class=\"bi bi-arrow-up-short\"></i></a>\r\n\r\n  <!-- Vendor JS Files -->\r\n  <script src=\"{% static 'ethereumWeb3App/assets/vendor/aos/aos.js' %}\"></script>\r\n  <script src=\"{% static 'ethereumWeb3App/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}\"></script>\r\n  <script src=\"{% static 'ethereumWeb3App/assets/vendor/glightbox/js/glightbox.min.js' %}\"></script>\r\n  <script src=\"{% static 'ethereumWeb3App/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}\"></script>\r\n  <script src=\"{% static 'ethereumWeb3App/assets/vendor/swiper/swiper-bundle.min.js' %}\"></script>\r\n  <script src=\"{% static 'ethereumWeb3App/assets/vendor/php-email-form/validate.js' %}\"></script>\r\n\r\n  <!-- Template Main JS File -->\r\n  <script src=\"{% static 'ethereumWeb3App/assets/js/main.js' %}\"></script>\r\n\r\n</body>\r\n\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/index.html b/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/index.html
+--- a/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/index.html	(revision d44c5bc37f6b6980403afb3e90852169cc764f5e)
++++ b/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/index.html	(date 1652784080466)
+@@ -6,7 +6,7 @@
+   <meta charset="utf-8">
+   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+ 
+-  <title>Plato Bootstrap Template - Index</title>
++  <title>SECURE-DROP</title>
+   <meta content="" name="description">
+   <meta content="" name="keywords">
+ 
+@@ -79,39 +79,8 @@
+       <section id="about" class="about">
+         <div class="container">
+ 
+-          <div class="row">
+-            <div style="background-image: url({% static 'ethereumWeb3App/assets/img/about.jpg' %})" data-aos="fade-right" class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+-            <div class="col-xl-7 pt-4 pt-lg-0 d-flex align-items-stretch">
+-              <div class="content d-flex flex-column justify-content-center" data-aos="fade-left">
+-                <h3>Voluptatem dignissimos provident quasi</h3>
+-                <p>
+-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+-                </p>
+-                <div class="row">
+-                  <div class="col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="100">
+-                    <i class="bx bx-receipt"></i>
+-                    <h4>Corporis voluptates sit</h4>
+-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+-                  </div>
+-                  <div class="col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="200">
+-                    <i class="bx bx-cube-alt"></i>
+-                    <h4>Ullamco laboris nisi</h4>
+-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+-                  </div>
+-                  <div class="col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="300">
+-                    <i class="bx bx-images"></i>
+-                    <h4>Labore consequatur</h4>
+-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+-                  </div>
+-                  <div class="col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="400">
+-                    <i class="bx bx-shield"></i>
+-                    <h4>Beatae veritatis</h4>
+-                    <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+-                  </div>
+-                </div>
+-              </div><!-- End .content-->
+-            </div>
+-          </div>
++          <div class="row"></div>
++
+ 
+         </div>
+       </section><!-- End About Section -->
+@@ -120,31 +89,7 @@
+       <section id="clients" class="clients">
+         <div class="container">
+ 
+-          <div class="row">
+-
+-            <div class="col-lg-2 col-md-4 col-6">
+-              <img src="{% static 'ethereumWeb3App/assets/img/clients/client-1.png' %}" class="img-fluid" alt="" data-aos="zoom-in">
+-            </div>
+-
+-            <div class="col-lg-2 col-md-4 col-6">
+-              <img src="{% static 'ethereumWeb3App/assets/img/clients/client-2.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+-            </div>
+-
+-            <div class="col-lg-2 col-md-4 col-6">
+-              <img src="{% static 'ethereumWeb3App/assets/img/clients/client-3.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="200">
+-            </div>
+ 
+-            <div class="col-lg-2 col-md-4 col-6">
+-              <img src="{% static 'ethereumWeb3App/assets/img/clients/client-4.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="300">
+-            </div>
+-
+-            <div class="col-lg-2 col-md-4 col-6">
+-              <img src="{% static 'ethereumWeb3App/assets/img/clients/client-5.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="400">
+-            </div>
+-
+-            <div class="col-lg-2 col-md-4 col-6">
+-              <img src="{% static 'ethereumWeb3App/assets/img/clients/client-6.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
+-            </div>
+ 
+           </div>
+ 
+@@ -153,42 +98,10 @@
+ 
+       <!-- ======= Features Section ======= -->
+       <section id="features" class="features">
+-        <div class="container">
++
+ 
+-          <div class="row">
+-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+-              <div class="card" data-aos="fade-up">
+-                <img src="{% static 'ethereumWeb3App/assets/img/features-1.jpg' %}" class="card-img-top" alt="...">
+-                <div class="card-body">
+-                  <i class="bx bx-tachometer"></i>
+-                  <h5 class="card-title"><a href="">Our Mission</a></h5>
+-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+-                </div>
+-              </div>
+-            </div>
+-            <div class="col-lg-4 col-md-6 mt-5 mt-md-0 d-flex align-items-stretch">
+-              <div class="card" data-aos="fade-up" data-aos-delay="150">
+-                <img src="{% static 'ethereumWeb3App/assets/img/features-2.jpg' %}" class="card-img-top" alt="...">
+-                <div class="card-body">
+-                  <i class="bx bx-file"></i>
+-                  <h5 class="card-title"><a href="">Our Plan</a></h5>
+-                  <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+-                </div>
+-              </div>
+-            </div>
+-            <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 d-flex align-items-stretch">
+-              <div class="card" data-aos="fade-up" data-aos-delay="300">
+-                <img src="{% static 'ethereumWeb3App/assets/img/features-3.jpg' %}" class="card-img-top" alt="...">
+-                <div class="card-body">
+-                  <i class="bx bx-show"></i>
+-                  <h5 class="card-title"><a href="">Our Vision</a></h5>
+-                  <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. </p>
+-                </div>
+-              </div>
+-            </div>
+-          </div>
+ 
+-        </div>
++
+       </section><!-- End Features Section -->
+ 
+       <!-- ======= Cta Section ======= -->
+@@ -217,45 +130,46 @@
+           <div class="row">
+             <div class="col-md-6">
+               <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+-                <i class="bi bi-briefcase" style="
++                <i class="bi bi-shield-check" style="
+                 color: #0ea5e0;"></i>
+-                <h4><a href="#">Lorem Ipsum</a></h4>
+-                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
++                <h4><a href="#"> Decentralized web hosting</a></h4>
++                <p>The data uploaded is stored on local Blockchain network</p>
+               </div>
+             </div>
+             <div class="col-md-6">
+               <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+-                <i class="bi bi-card-checklist" style="color: #07cc70;"></i>
+-                <h4><a href="#">Dolor Sitema</a></h4>
+-                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
++                <i class="bi bi-images" style="color: #07cc70;"></i>
++                <h4><a href="#">Upload Image</a></h4>
++                <p>Upload your image securley using IPFS</p>
+               </div>
+             </div>
+             <div class="col-md-6">
+               <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+-                <i class="bi bi-bar-chart" style="color: #e40373;"></i>
+-                <h4><a href="#">Sed ut perspiciatis</a></h4>
+-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
++                <i class="bi bi-folder-check" style="color: #e40373;"></i>
++                <h4><a href="#">Upload File</a></h4>
++                <p>Upload your file Securely using IPFS</p>
+               </div>
+             </div>
+             <div class="col-md-6">
+               <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+-                <i class="bi bi-binoculars" style="color: #f0b103;"></i>
+-                <h4><a href="#">Nemo Enim</a></h4>
+-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
++                <i class="bi bi-code" style="color: #f0b103;"></i>
++                <h4><a href="#">Upload Project code </a></h4>
++                <p>Upload your project code securely using IPFS</p>
+               </div>
+             </div>
+             <div class="col-md-6">
+               <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
+-                <i class="bi bi-brightness-high" style="color: #3145fa;"></i>
+-                <h4><a href="#">Magni Dolore</a></h4>
+-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
++                <i class="bi bi-play-circle" style="color: #3145fa;"></i>
++                <h4><a href="#">Upload Video</a></h4>
++                <p>Upload your video securely using IPFS
++                </p>
+               </div>
+             </div>
+             <div class="col-md-6">
+               <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
+-                <i class="bi bi-calendar4-week" style="color: #a00098;"></i>
+-                <h4><a href="#">Eiusmod Tempor</a></h4>
+-                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
++                <i class="bi bi-patch-check-fill" style="color: #a00098;"></i>
++                <h4><a href="#">Secure your data</a></h4>
++                <p>The decentralization provides the security for the data with no third party involvement</p>
+               </div>
+             </div>
+           </div>
+@@ -263,237 +177,13 @@
+         </div>
+       </section><!-- End Services Section -->
+       <!-- ======= Testimonials Section ======= -->
+-      <section id="testimonials" class="testimonials">
+-        <div class="container position-relative">
+-
+-          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+-            <div class="swiper-wrapper">
+-
+-              <div class="swiper-slide">
+-                <div class="testimonial-item">
+-                  <img src="{% static 'ethereumWeb3App/assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+-                  <h3>Saul Goodman</h3>
+-                  <h4>Ceo &amp; Founder</h4>
+-                  <p>
+-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+-                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+-                  </p>
+-                </div>
+-              </div><!-- End testimonial item -->
+-
+-              <div class="swiper-slide">
+-                <div class="testimonial-item">
+-                  <img src="{% static 'ethereumWeb3App/assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+-                  <h3>Sara Wilsson</h3>
+-                  <h4>Designer</h4>
+-                  <p>
+-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+-                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+-                  </p>
+-                </div>
+-              </div><!-- End testimonial item -->
+ 
+-              <div class="swiper-slide">
+-                <div class="testimonial-item">
+-                  <img src="{% static 'ethereumWeb3App/assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+-                  <h3>Jena Karlis</h3>
+-                  <h4>Store Owner</h4>
+-                  <p>
+-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+-                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+-                  </p>
+-                </div>
+-              </div><!-- End testimonial item -->
+-
+-              <div class="swiper-slide">
+-                <div class="testimonial-item">
+-                  <img src="{% static 'ethereumWeb3App/assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+-                  <h3>Matt Brandon</h3>
+-                  <h4>Freelancer</h4>
+-                  <p>
+-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+-                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+-                  </p>
+-                </div>
+-              </div><!-- End testimonial item -->
+-
+-              <div class="swiper-slide">
+-                <div class="testimonial-item">
+-                  <img src="{% static 'ethereumWeb3App/assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+-                  <h3>John Larson</h3>
+-                  <h4>Entrepreneur</h4>
+-                  <p>
+-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+-                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+-                  </p>
+-                </div>
+-              </div><!-- End testimonial item -->
+-
+-            </div>
+-            <div class="swiper-pagination"></div>
+-          </div>
+-
+-        </div>
+-      </section><!-- End Testimonials Section -->
+ 
+       <!-- ======= Team Section ======= -->
+-      <section id="team" class="team">
+-        <div class="container">
+-
+-          <div class="section-title" data-aos="fade-down">
+-            <span>Team</span>
+-            <h2>Team</h2>
+-            <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+-          </div>
+-
+-          <div class="row">
+-
+-            <div class="col-xl-3 col-lg-4 col-md-6">
+-              <div class="member" data-aos="fade-up" data-aos-delay="100">
+-                <img src="{% static 'ethereumWeb3App/assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">
+-                <div class="member-info">
+-                  <div class="member-info-content">
+-                    <h4>Walter White</h4>
+-                    <span>Chief Executive Officer</span>
+-                  </div>
+-                  <div class="social">
+-                    <a href=""><i class="bi bi-twitter"></i></a>
+-                    <a href=""><i class="bi bi-facebook"></i></a>
+-                    <a href=""><i class="bi bi-instagram"></i></a>
+-                    <a href=""><i class="bi bi-linkedin"></i></a>
+-                  </div>
+-                </div>
+-              </div>
+-            </div>
+-
+-            <div class="col-xl-3 col-lg-4 col-md-6 mt-4 mt-md-0">
+-              <div class="member" data-aos="fade-up" data-aos-delay="200">
+-                <img src="{% static 'ethereumWeb3App/assets/img/team/team-2.jpg' %}" class="img-fluid" alt="">
+-                <div class="member-info">
+-                  <div class="member-info-content">
+-                    <h4>Sarah Jhonson</h4>
+-                    <span>Product Manager</span>
+-                  </div>
+-                  <div class="social">
+-                    <a href=""><i class="bi bi-twitter"></i></a>
+-                    <a href=""><i class="bi bi-facebook"></i></a>
+-                    <a href=""><i class="bi bi-instagram"></i></a>
+-                    <a href=""><i class="bi bi-linkedin"></i></a>
+-                  </div>
+-                </div>
+-              </div>
+-            </div>
+-
+-            <div class="col-xl-3 col-lg-4 col-md-6 mt-4 mt-lg-0" data-wow-delay="0.2s">
+-              <div class="member" data-aos="fade-up" data-aos-delay="300">
+-                <img src="{% static 'ethereumWeb3App/assets/img/team/team-3.jpg' %}" class="img-fluid" alt="">
+-                <div class="member-info">
+-                  <div class="member-info-content">
+-                    <h4>William Anderson</h4>
+-                    <span>CTO</span>
+-                  </div>
+-                  <div class="social">
+-                    <a href=""><i class="bi bi-twitter"></i></a>
+-                    <a href=""><i class="bi bi-facebook"></i></a>
+-                    <a href=""><i class="bi bi-instagram"></i></a>
+-                    <a href=""><i class="bi bi-linkedin"></i></a>
+-                  </div>
+-                </div>
+-              </div>
+-            </div>
+-
+-            <div class="col-xl-3 col-lg-4 col-md-6 mt-4 mt-lg-0" data-wow-delay="0.3s">
+-              <div class="member" data-aos="fade-up" data-aos-delay="400">
+-                <img src="{% static 'ethereumWeb3App/assets/img/team/team-4.jpg' %}" class="img-fluid" alt="">
+-                <div class="member-info">
+-                  <div class="member-info-content">
+-                    <h4>Amanda Jepson</h4>
+-                    <span>Accountant</span>
+-                  </div>
+-                  <div class="social">
+-                    <a href=""><i class="bi bi-twitter"></i></a>
+-                    <a href=""><i class="bi bi-facebook"></i></a>
+-                    <a href=""><i class="bi bi-instagram"></i></a>
+-                    <a href=""><i class="bi bi-linkedin"></i></a>
+-                  </div>
+-                </div>
+-              </div>
+-            </div>
+-
+-          </div>
+ 
+-        </div>
+-      </section><!-- End Team Section -->
+ 
+-      <!-- ======= F.A.Q Section ======= -->
+-      <section id="faq" class="faq">
+-        <div class="container">
+-
+-          <div class="section-title" data-aos="fade-down">
+-            <span>F.A.Q</span>
+-            <h2>F.A.Q</h2>
+-            <p>Frequently Asked Questions</p>
+-          </div>
+-
+-          <div class="faq-list">
+-            <ul>
+-              <li data-aos="fade-up">
+-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+-                <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+-                  <p>
+-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+-                  </p>
+-                </div>
+-              </li>
+-
+-              <li data-aos="fade-up" data-aos-delay="100">
+-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+-                <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+-                  <p>
+-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+-                  </p>
+-                </div>
+-              </li>
+-
+-              <li data-aos="fade-up" data-aos-delay="200">
+-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+-                <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+-                  <p>
+-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+-                  </p>
+-                </div>
+-              </li>
+-
+-              <li data-aos="fade-up" data-aos-delay="300">
+-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+-                <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+-                  <p>
+-                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+-                  </p>
+-                </div>
+-              </li>
+-
+-              <li data-aos="fade-up" data-aos-delay="400">
+-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+-                <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+-                  <p>
+-                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+-                  </p>
+-                </div>
+-              </li>
+-
+-            </ul>
+-          </div>
+-
+-        </div>
+-      </section><!-- End F.A.Q Section -->
+ 
+-      <!-- ======= Contact Us Section ======= -->
++               <!-- ======= Contact Us Section ======= -->
+       <section id="contact" class="contact">
+         <div class="container">
+ 
+@@ -507,7 +197,7 @@
+               <div class="info-box">
+                 <i class="bx bx-map"></i>
+                 <h3>Our Address</h3>
+-                <p>A108 Adam Street, New York, NY 535022</p>
++                <p> SIT, BH road Tumakuru</p>
+               </div>
+             </div>
+             <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+@@ -557,30 +247,16 @@
+     <!-- ======= Footer ======= -->
+     <footer id="footer">
+ 
+-      <div class="footer-newsletter">
+-        <div class="container">
+-          <div class="row justify-content-center">
+-            <div class="col-lg-6">
+-              <h4>Join Our Newsletter</h4>
+-              <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+-              <form action="" method="post">
+-                <input type="email" name="email"><input type="submit" value="Subscribe">
+-              </form>
+-            </div>
+-          </div>
+-        </div>
+-      </div>
++
+ 
+       <div class="footer-top">
+         <div class="container">
+           <div class="row">
+ 
+             <div class="col-lg-3 col-md-6 footer-contact">
+-              <h3>Plato</h3>
++              <h3>SECURE-DROP</h3>
+               <p>
+-                A108 Adam Street <br>
+-                New York, NY 535022<br>
+-                United States <br><br>
++                SIT, BH road Tumkur <br><br>
+                 <strong>Phone:</strong> +1 5589 55488 55<br>
+                 <strong>Email:</strong> info@example.com<br>
+               </p>
+@@ -600,11 +276,10 @@
+             <div class="col-lg-3 col-md-6 footer-links">
+               <h4>Our Services</h4>
+               <ul>
+-                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+-                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+-                <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
++                <li><i class="bx bx-chevron-right"></i> <a href="#">Decentralized web hosting</a></li>
++                <li><i class="bx bx-chevron-right"></i> <a href="#">Upload image,video,document,etc..</a></li>
++                <li><i class="bx bx-chevron-right"></i> <a href="#">Secure your private files</a></li>
+                 <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+-                <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+               </ul>
+             </div>
+ 
+@@ -626,14 +301,14 @@
+ 
+       <div class="container py-4">
+         <div class="copyright">
+-          &copy; Copyright <strong><span>Plato</span></strong>. All Rights Reserved
++          &copy; Copyright <strong><span>SECURE-DROP</span></strong>. All Rights Reserved
+         </div>
+         <div class="credits">
+           <!-- All the links in the footer should remain intact. -->
+           <!-- You can delete the links only if you purchased the pro version. -->
+           <!-- Licensing information: https://bootstrapmade.com/license/ -->
+           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/plato-responsive-bootstrap-website-template/ -->
+-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
++          Designed by <a href="https://bootstrapmade.com/">SIT mini-project B9</a>
+         </div>
+       </div>
+     </footer><!-- End Footer -->
+Index: ethereumWeb3/ethereumWeb3App/views.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.shortcuts import render\r\nfrom .forms import CreateUserForm\r\nfrom django.shortcuts import redirect\r\nfrom django.contrib import messages\r\nfrom django.contrib.auth import authenticate, login , logout\r\nfrom .tests import passMatch,passLength,emailValidity,strongPassword\r\nfrom .models import User\r\nimport hashlib as hash\r\n# Create your views here.\r\n\r\n\r\ndef index(request):\r\n    return render(request, \"ethereumWeb3App/index.html\")\r\n\r\n\r\ndef loginPage(request):\r\n    context = {}\r\n    if request.method == 'POST':\r\n        username = str(request.POST.get('username'))\r\n        password = request.POST.get('password')\r\n\r\n        user = authenticate(request, username=username, password=password)\r\n        if user is not None:\r\n            login(request, user)\r\n            return userView(request, (username[0].upper()+username[1:]))\r\n        else:\r\n            messages.info(request, \"Username or password is incorrect\")\r\n\r\n    return render(request, \"ethereumWeb3App/login.html\")\r\n\r\n\r\ndef logoutUser(request):\r\n    logout(request)\r\n    return redirect('login')\r\n\r\n\r\ndef registerPage(request):\r\n    flag1 = 0\r\n    flag2 = 0\r\n    flag3 = 0\r\n    flag4 = 0\r\n\r\n    if request.method == 'POST':\r\n        form = CreateUserForm(request.POST)\r\n\r\n        username = request.POST.get('username')\r\n        email = request.POST.get('email')\r\n        pass1 = request.POST.get('password1')\r\n        pass2 = request.POST.get('password2')\r\n        print(pass1+pass2)\r\n        flag1 = emailValidity(email)\r\n        flag2 = passLength(password=pass1)\r\n        flag3 = passMatch(pass1,pass2)\r\n        flag4 = strongPassword(pass1)\r\n\r\n        print(flag3)\r\n        if flag1 == 1 and flag2 == 1 and flag3 == 1 and flag4 == 1:\r\n            messages.success(request, \"Account was created for :\" + username)\r\n            form.username = username\r\n            form.email = email\r\n            form.password1 = pass1\r\n            form.password2 = pass2\r\n            form.save()\r\n            hashVal: str = hash.sha256(str(username).encode(\"utf-8\")).hexdigest()\r\n            utmp = User(userKey=hashVal, username=username)\r\n            utmp.save()\r\n\r\n            return redirect('login')\r\n        elif flag1 == 0:\r\n            messages.info(request, \"Invalid email\")\r\n        elif flag2 == 0:\r\n            messages.info(request, \"Password length is too short\")\r\n        elif flag3 == 0:\r\n            messages.info(request, \"Passwords don't match\")\r\n        elif flag4 == 0:\r\n            messages.info(request, \"Weak password - Include numbers , Uppercase and special characters in password\")\r\n\r\n    return render(request, \"ethereumWeb3App/register.html\", {})\r\n\r\n\r\ndef home(request):\r\n    return render(request, \"ethereumWeb3App/index.html\")\r\n\r\n\r\ndef userView(request, username):\r\n    return render(request,\"ethereumWeb3App/userview.html\",  {\"username\": username})\r\n\r\n\r\ndef blog(request):\r\n    return render(request, \"ethereumWeb3App/blog.html\")
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ethereumWeb3/ethereumWeb3App/views.py b/ethereumWeb3/ethereumWeb3App/views.py
+--- a/ethereumWeb3/ethereumWeb3App/views.py	(revision d44c5bc37f6b6980403afb3e90852169cc764f5e)
++++ b/ethereumWeb3/ethereumWeb3App/views.py	(date 1652784191013)
+@@ -13,6 +13,7 @@
+     return render(request, "ethereumWeb3App/index.html")
+ 
+ 
++
+ def loginPage(request):
+     context = {}
+     if request.method == 'POST':
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"04995b27-adda-46e0-9f19-07a5598e7980\" name=\"Changes\" comment=\"blog page\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Solidity Contract\" />\r\n        <option value=\"Python Script\" />\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"MacroExpansionManager\">\r\n    <option name=\"directoryName\" value=\"8z75sfyl\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"27s8KXbHmCbrGTgOGwaODADB1hF\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"DefaultHtmlFileTemplate\": \"HTML File\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"last_opened_file_path\": \"C:/xampp/htdocs/Mini_Project/Mini-project-web3\",\r\n    \"settings.editor.selected.configurable\": \"com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\home\\PycharmProjects\\Web3\\ethereumWeb3\\ethereumWeb3App\\static\\ethereumWeb3App\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\home\\PycharmProjects\\Web3\\ethereumWeb3\\ethereumWeb3App\\static\\ethereumWeb3App\" />\r\n      <recent name=\"C:\\Users\\home\\PycharmProjects\\Web3\\ethereumWeb3\\ethereumWeb3App\\templates\\ethereumWeb3App\" />\r\n      <recent name=\"C:\\Users\\home\\PycharmProjects\\Web3\\ethereumWeb3\\ethereumWeb3App\\static\\images\" />\r\n      <recent name=\"C:\\Users\\home\\PycharmProjects\\Web3\\ethereumWeb3\\ethereumWeb3App\\images\" />\r\n      <recent name=\"C:\\Users\\home\\PycharmProjects\\Web3\\brownie-project\\scripts\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"deployIPFS\" type=\"PythonConfigurationType\" factoryName=\"Python\" nameIsGenerated=\"true\">\r\n      <module name=\"Mini-project-web3\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <EXTENSION ID=\"net.ashald.envfile\">\r\n        <option name=\"IS_ENABLED\" value=\"false\" />\r\n        <option name=\"IS_SUBST\" value=\"false\" />\r\n        <option name=\"IS_PATH_MACRO_SUPPORTED\" value=\"false\" />\r\n        <option name=\"IS_IGNORE_MISSING_FILES\" value=\"false\" />\r\n        <option name=\"IS_ENABLE_EXPERIMENTAL_INTEGRATIONS\" value=\"false\" />\r\n        <ENTRIES>\r\n          <ENTRY IS_ENABLED=\"true\" PARSER=\"runconfig\" />\r\n        </ENTRIES>\r\n      </EXTENSION>\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/deployIPFS.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"04995b27-adda-46e0-9f19-07a5598e7980\" name=\"Changes\" comment=\"\" />\r\n      <created>1650097371976</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1650097371976</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"first commit push\">\r\n      <created>1650638367925</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1650638367925</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"change\">\r\n      <created>1650638685226</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1650638685226</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"change\">\r\n      <created>1650782715378</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1650782715378</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"new code\">\r\n      <created>1650793251154</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1650793251154</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"changes\">\r\n      <created>1651328635862</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1651328635862</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"changes\">\r\n      <created>1651328675304</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1651328675304</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"changes\">\r\n      <created>1651332822882</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1651332822882</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"changes\">\r\n      <created>1651369828604</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1651369828604</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"changes\">\r\n      <created>1651386309592</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1651386309592</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"login signup\">\r\n      <created>1651393287871</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1651393287871</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"login signup\">\r\n      <created>1651401100595</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1651401100595</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"login signup done\">\r\n      <created>1651409790873</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1651409790873</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"blog page\">\r\n      <created>1652775255424</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1652775255424</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"blog page\">\r\n      <created>1652775838068</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1652775838068</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"15\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/master\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"first commit push\" />\r\n    <MESSAGE value=\"change\" />\r\n    <MESSAGE value=\"new code\" />\r\n    <MESSAGE value=\"changes\" />\r\n    <MESSAGE value=\"login signup\" />\r\n    <MESSAGE value=\"login signup done\" />\r\n    <MESSAGE value=\"blog page\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"blog page\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d44c5bc37f6b6980403afb3e90852169cc764f5e)
++++ b/.idea/workspace.xml	(date 1652784191371)
+@@ -4,7 +4,12 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="04995b27-adda-46e0-9f19-07a5598e7980" name="Changes" comment="blog page" />
++    <list default="true" id="04995b27-adda-46e0-9f19-07a5598e7980" name="Changes" comment="blog page">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/ethereumWeb3/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/db.sqlite3" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/index.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/views.py" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -50,7 +55,7 @@
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "last_opened_file_path": "C:/xampp/htdocs/Mini_Project/Mini-project-web3",
+-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
++    "settings.editor.selected.configurable": "preferences.pluginManager"
+   }
+ }]]></component>
+   <component name="RecentsManager">
+@@ -205,7 +210,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1652775838068</updated>
+     </task>
+-    <option name="localTasksCounter" value="15" />
++    <task id="LOCAL-00015" summary="blog page">
++      <created>1652776105666</created>
++      <option name="number" value="00015" />
++      <option name="presentableId" value="LOCAL-00015" />
++      <option name="project" value="LOCAL" />
++      <updated>1652776105666</updated>
++    </task>
++    <option name="localTasksCounter" value="16" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
