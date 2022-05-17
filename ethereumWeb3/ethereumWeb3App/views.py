@@ -13,6 +13,7 @@ def index(request):
     return render(request, "ethereumWeb3App/index.html")
 
 
+
 def loginPage(request):
     context = {}
     if request.method == 'POST':
