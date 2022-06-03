@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04995b27-adda-46e0-9f19-07a5598e7980" name="Changes" comment="changes">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-05-2022_04_13_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-05-2022_04_13_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-05-2022_13_59__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-05-2022_13_59__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-05-2022_13_59__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-05-2022_13_59__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-05-17_20_28__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-05-17_20_28__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-05-17_20_30__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-05-17_20_30__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/uploadFIle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Mini-project-web3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Mini-project-web3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-05-2022_04_13_PM_[Changes]/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-05-2022_04_13_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-05-2022_04_13_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-05-17_20_30_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-05-17_20_30__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereumWeb3/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/userview.html" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/userview.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +59,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Mini-project-web3&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "last_opened_file_path": "C:/xampp/htdocs/Mini-project-web3"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\home\PycharmProjects\Web3\ethereumWeb3\ethereumWeb3App\static\ethereumWeb3App" />
@@ -229,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652799879877</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="changes">
+      <created>1653033302103</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1653033302103</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

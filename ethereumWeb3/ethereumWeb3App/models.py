@@ -21,3 +21,12 @@ class UserData(models.Model):
 
     def __str__(self):
         return self.IpfsHash
+
+
+class Document(models.Model):
+    name = models.CharField()
+    document = models.FileField(upload_to="documents/")
+    uploadTime = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
