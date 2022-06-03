@@ -24,8 +24,8 @@ class UserData(models.Model):
 
 
 class Document(models.Model):
-    name = models.CharField()
-    document = models.FileField(upload_to="documents/")
+    name = models.CharField(max_length=100)
+    document = models.FileField(upload_to='media/documents/')
     uploadTime = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

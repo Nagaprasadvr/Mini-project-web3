@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import CreateUserForm
+from .forms import CreateUserForm,UploadFile
 from django.shortcuts import redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate, login , logout
@@ -23,7 +23,7 @@ def loginPage(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return userView(request, (username[0].upper()+username[1:]))
+            return redirect('userView', username=(username[0].upper()+username[1:]))
         else:
             messages.info(request, "Username or password is incorrect")
 
@@ -62,7 +62,7 @@ def registerPage(request):
             form.password1 = pass1
             form.password2 = pass2
             form.save()
-            hashVal: str = hash.sha256(str(username).encode("utf-8")).hexdigest()
+            hashVal: str = hash.sha256(str(username+pass1).encode("utf-8")).hexdigest()
             utmp = User(userKey=hashVal, username=username)
             utmp.save()
 
@@ -85,6 +85,17 @@ def home(request):
 
 def userView(request, username):
     return render(request,"ethereumWeb3App/userview.html",  {"username": username})
+
+
+def Upload(request):
+    if request.method == 'POST':
+        form = UploadFile(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = UploadFile()
+        return render(request, "ethereumWeb3App/uploadFile.html", {'form': form})
 
 
 def blog(request):

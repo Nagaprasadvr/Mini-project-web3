@@ -5,20 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04995b27-adda-46e0-9f19-07a5598e7980" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/uploadFIle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Mini-project-web3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Mini-project-web3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-05-2022_04_13_PM_[Changes]/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-05-2022_04_13_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-05-2022_04_13_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-05-17_20_30_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-05-17_20_30__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/migrations/0002_document.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ethereumWeb3/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/static/ethereumWeb3App/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/static/ethereumWeb3App/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/uploadFIle.html" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/uploadFIle.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/userview.html" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/templates/ethereumWeb3App/userview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ethereumWeb3/ethereumWeb3App/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653033302103</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="changes">
+      <created>1654222766169</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1654222766169</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

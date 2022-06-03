@@ -11,7 +11,7 @@ class CreateUserForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2']
 
 
-class UploadFile(forms.Forms):
+class UploadFile(forms.ModelForm):
     class Meta:
         model = Document
-        fileds = ['name', 'document']
+        fields = ['name', 'document']

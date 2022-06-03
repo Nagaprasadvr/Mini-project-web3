@@ -7,6 +7,8 @@ urlpatterns = [
     path('home/', views.index, name="home"),
     path('login/', views.loginPage, name="login"),
     path('Signup/', views.registerPage, name="Signup"),
+    path('userView/<str:username>', views.userView, name="userView"),
     path('blog/', views.blog, name="blog"),
     path('logout/', views.logoutUser, name="logout"),
+    path('UploadFile/', views.Upload, name="UploadFile")
 ]
