@@ -1,5 +1,6 @@
 {% extends "ethereumWeb3App/base.html" %}
 
+
 {% block code %}
 <style>
     .button {
@@ -14,6 +15,18 @@
   cursor: pointer;
 }
 .button2 {background-color: teal;}
+table, th, td {
+border: 1px solid black;
+border-collapse: collapse;
+}
+th, td {
+padding: 5px;
+text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #add8e6;
+}
 </style>
 <br><br><br>
 <h1 style="color: teal;padding-left: 4em;"><b> Hello {{username}} : You are logged in </b></h1>
@@ -29,6 +42,33 @@
     <a class= "button button2 " href="{% url 'UploadFile' %}">Upload</a>
 
 
+</div>
+<div>
+    <table align="right" style="width:35%">
+<tr>
+<th>USERNAME</th>
+<td>{{username}}</td>
+</tr>
+<tr>
+<th>Mobile:</th>
+<td>123456789</td>
+</tr>
+      <tr>
+<th>BALANCE</th>
+<td>123456789</td>
+</tr>
+      <tr>
+<th>WALLET ADDRESS</th>
+<td>123456789</td>
+</tr>
+      <tr>
+<th>BLOCKCHAIN N/W</th>
+<td>GANACHE</td>
+</tr>
+
+</table>
+</body>
+</html>
 </div>
 
 
