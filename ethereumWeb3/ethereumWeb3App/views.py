@@ -55,8 +55,8 @@ def registerPage(request):
     flag2 = 0
     flag3 = 0
     flag4 = 0
-
-    address = w3.eth.accounts[getAddress()]
+    var = getAddress()
+    address = w3.eth.accounts[var]
     if request.method == 'POST':
         form = CreateUserForm(request.POST)
 
@@ -81,8 +81,9 @@ def registerPage(request):
             u = User(username=username,userKey=userKey,pubAddress=address)
             form.save()
             u.save()
-
+            print(var)
             updateAddress()
+
 
             return redirect('login')
         elif flag1 == 0:
@@ -105,7 +106,10 @@ def userView(request, userkey):
     u = User.objects.get(userKey=userkey)
     addr = u.pubAddress
     balance =w3.fromWei(w3.eth.get_balance(addr),"ether")
-    return render(request, "ethereumWeb3App/userview.html", {"userkey": userkey[0:32], "address":addr,"balance":balance})
+    return render(request, "ethereumWeb3App/userview.html", {"userkey": userkey[0:32],
+                                                             "address":addr,
+                                                             "balance":balance,
+                                                             "username":request.user})
 
 
 def Upload(request):

@@ -13,13 +13,6 @@ class User(models.Model):
         return self.username
 
 
-class AccIndex(models.Model):
-    AccIndex = models.IntegerField(default=0,unique=True,primary_key=True)
-    userKey = models.ForeignKey(User,on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.AccIndex
-
 
 class UserData(models.Model):
     index = models.IntegerField(serialize=True,default=0)

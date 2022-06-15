@@ -30,14 +30,13 @@
         <h1 style="color: teal;padding-left: 4em;"><b> Hello {{ userkey }} : You are logged in </b></h1>
         <br>
         <br>
-        <br>
-        <br>
+
         <br>
 
 
         <div align="center" >
 
-            <a class= "button button2 " href="{% url 'UploadFile' %}">Upload</a>
+            <a class= "button button2 " href="{% url 'UploadFile' %}">Upload Digital Assets</a>
 
 
         </div>
@@ -47,7 +46,10 @@
         <br>
         <div>
             <h1 align="center" style="color:teal"><b>SECURE-DROP WALLET</b></h1>
+            <br>
+            <br>
             <table align="center" style="width:40%; height=50%">
+
 
                     <tr>
         <th>BLOCKCHAIN NETWORK</th>
@@ -65,6 +67,10 @@
         <tr>
         <th>BALANCE</th>
         <td><b>{{ balance }}      <b>Ether</b></b></td>
+        </tr>
+                  <tr>
+        <th>USERNAME</th>
+        <td><b>{{ username }}</b></b></td>
         </tr>
 
 

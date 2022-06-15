@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.contrib import messages
 import json
-from .models import AccIndex
+
 # Create your tests here.
 
 var = 1
@@ -58,13 +58,13 @@ def getAddress():
     return jsonObj['index']
 
 
-
 def updateAddress():
     file = open("C:\\Users\\home\\PycharmProjects\\Web3\\Mini-project-web3\\ethereumWeb3\\ethereumWeb3App\\store.json", "r")
     jsonObj = json.load(file)
-    jsonObj['index'] += 1
+
+    jsonObj['index'] = jsonObj['index']+1
     file.close()
-    file = open("store.json", "w")
+    file = open("C:\\Users\\home\\PycharmProjects\\Web3\\Mini-project-web3\\ethereumWeb3\\ethereumWeb3App\\store.json", "w")
     json.dump(jsonObj,file)
     file.close()
     return jsonObj['index']
