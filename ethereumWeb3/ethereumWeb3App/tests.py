@@ -52,8 +52,7 @@ def strongPassword(password: str):
 
 
 def getAddress():
-    i = AccIndex()
-    file = open("store.json", 'r')
+    file = open("C:\\Users\\home\\PycharmProjects\\Web3\\Mini-project-web3\\ethereumWeb3\\ethereumWeb3App\\store.json", 'r')
     jsonObj = json.load(file)
     file.close()
     return jsonObj['index']
@@ -61,7 +60,7 @@ def getAddress():
 
 
 def updateAddress():
-    file = open("store.json", "r")
+    file = open("C:\\Users\\home\\PycharmProjects\\Web3\\Mini-project-web3\\ethereumWeb3\\ethereumWeb3App\\store.json", "r")
     jsonObj = json.load(file)
     jsonObj['index'] += 1
     file.close()
