@@ -1,13 +1,24 @@
 from django.db import models
 
 
+
+
 class User(models.Model):
 
     username = models.CharField(max_length=100, unique=True, null=True, blank=True)
     userKey = models.CharField(max_length=100, primary_key=True, default="1234")
+    pubAddress = models.CharField(max_length=100,default="0x")
 
     def __str__(self):
         return self.username
+
+
+class AccIndex(models.Model):
+    AccIndex = models.IntegerField(default=0,unique=True,primary_key=True)
+    userKey = models.ForeignKey(User,on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.AccIndex
 
 
 class UserData(models.Model):

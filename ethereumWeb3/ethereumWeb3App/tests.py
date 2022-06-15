@@ -1,8 +1,10 @@
 from django.test import TestCase
 from django.contrib import messages
+import json
+from .models import AccIndex
 # Create your tests here.
 
-
+var = 1
 def passLength(password: str):
     if len(password) >= 10:
         return True
@@ -47,3 +49,31 @@ def strongPassword(password: str):
         return True
     else:
         return False
+
+
+def getAddress():
+    i = AccIndex()
+    file = open("store.json", 'r')
+    jsonObj = json.load(file)
+    file.close()
+    return jsonObj['index']
+
+
+
+def updateAddress():
+    file = open("store.json", "r")
+    jsonObj = json.load(file)
+    jsonObj['index'] += 1
+    file.close()
+    file = open("store.json", "w")
+    json.dump(jsonObj,file)
+    file.close()
+    return jsonObj['index']
+
+
+
+
+
+
+
+

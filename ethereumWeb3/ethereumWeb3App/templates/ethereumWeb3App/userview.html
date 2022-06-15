@@ -1,76 +1,79 @@
 {% extends "ethereumWeb3App/base.html" %}
+    {% block code %}
+        <style>
+            .button {
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        .button2 {background-color: teal;}
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+        padding: 5px;
+        text-align: left;
+        }
+
+        tr:nth-child(even) {
+          background-color: #add8e6;
+        }
+        </style>
+        <br><br><br>
+        <h1 style="color: teal;padding-left: 4em;"><b> Hello {{ userkey }} : You are logged in </b></h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
 
-{% block code %}
-<style>
-    .button {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.button2 {background-color: teal;}
-table, th, td {
-border: 1px solid black;
-border-collapse: collapse;
-}
-th, td {
-padding: 5px;
-text-align: left;
-}
+        <div align="center" >
 
-tr:nth-child(even) {
-  background-color: #add8e6;
-}
-</style>
-<br><br><br>
-<h1 style="color: teal;padding-left: 4em;"><b> Hello {{username}} : You are logged in </b></h1>
-<br>
-<br>
-<br>
-<br>
-<br>
+            <a class= "button button2 " href="{% url 'UploadFile' %}">Upload</a>
 
 
-<div align="center" >
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+            <h1 align="center" style="color:teal"><b>SECURE-DROP WALLET</b></h1>
+            <table align="center" style="width:40%; height=50%">
 
-    <a class= "button button2 " href="{% url 'UploadFile' %}">Upload</a>
+                    <tr>
+        <th>BLOCKCHAIN NETWORK</th>
+        <td><b>GANACHE TEST NETWORK</b></td>
+        </tr>
 
-
-</div>
-<div>
-    <table align="right" style="width:35%">
-<tr>
-<th>USERNAME</th>
-<td>{{username}}</td>
-</tr>
-<tr>
-<th>Mobile:</th>
-<td>123456789</td>
-</tr>
-      <tr>
-<th>BALANCE</th>
-<td>123456789</td>
-</tr>
-      <tr>
-<th>WALLET ADDRESS</th>
-<td>123456789</td>
-</tr>
-      <tr>
-<th>BLOCKCHAIN N/W</th>
-<td>GANACHE</td>
-</tr>
-
-</table>
-</body>
-</html>
-</div>
+                         <tr>
+        <th>WALLET ADDRESS</th>
+        <td><b>{{ address }}</b></td>
+        </tr>
+                 <tr>
+        <th>USERKEY</th>
+        <td><b>{{ userkey }}</b></td>
+        </tr>
+        <tr>
+        <th>BALANCE</th>
+        <td><b>{{ balance }}      <b>Ether</b></b></td>
+        </tr>
 
 
 
-{% endblock %}
+
+
+        </table>
+
+        </div>
+
+
+    {% endblock %}
