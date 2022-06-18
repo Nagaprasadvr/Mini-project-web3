@@ -1,3 +1,4 @@
+import requests.exceptions
 from django.shortcuts import render
 from .forms import CreateUserForm, UploadFile
 from django.shortcuts import redirect
@@ -6,15 +7,21 @@ from django.contrib.auth import authenticate, login, logout
 from .tests import passMatch, passLength, emailValidity, strongPassword,getAddress,updateAddress
 from .models import User
 import hashlib as hash
+from requests.exceptions import ConnectionError
 from web3 import Web3
-
+from django.contrib.auth.decorators import login_required
 ganache = "http://127.0.0.1:8545"
+
 w3 = None
-try:
+
+def ganacheConnect():
+    global w3
     w3 = Web3(Web3.HTTPProvider(ganache))
-except:
-    print("Connection error")
+
+
+
 # Create your views here.
+
 
 
 def hashing(str1:str, str2:str)->str:
@@ -37,14 +44,14 @@ def loginPage(request):
             login(request, user)
             return redirect('userView', userkey=userkey)
         else:
-            messages.info(request, "Username or password is incorrect")
+            messages.info(request, "Username or password is incorrect or user doesn't exists")
 
     return render(request, "ethereumWeb3App/login.html")
 
 
 
 
-
+@login_required(login_url='login')
 def logoutUser(request):
     logout(request)
     return redirect('login')
@@ -55,7 +62,11 @@ def registerPage(request):
     flag2 = 0
     flag3 = 0
     flag4 = 0
+    ganacheConnect()
+    if not w3.isConnected():
+        return render(request,"ethereumWeb3App/ganache.html")
     var = getAddress()
+
     address = w3.eth.accounts[var]
     if request.method == 'POST':
         form = CreateUserForm(request.POST)
@@ -101,23 +112,29 @@ def registerPage(request):
 def home(request):
     return render(request, "ethereumWeb3App/index.html")
 
-
+@login_required(login_url='login/')
 def userView(request, userkey):
     u = User.objects.get(userKey=userkey)
     addr = u.pubAddress
-    balance =w3.fromWei(w3.eth.get_balance(addr),"ether")
-    return render(request, "ethereumWeb3App/userview.html", {"userkey": userkey[0:32],
+    ganacheConnect()
+    if w3.isConnected():
+        balance =w3.fromWei(w3.eth.get_balance(addr),"ether")
+        return render(request, "ethereumWeb3App/userview.html", {"userkey": userkey[0:32],
                                                              "address":addr,
                                                              "balance":balance,
                                                              "username":request.user})
+    else:
+        return render(request,"ethereumWeb3App/ganache.html")
 
 
+@login_required(login_url='login/')
 def Upload(request):
     if request.method == 'POST':
         form = UploadFile(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('index')
+        form = UploadFile()
+        return render(request,"ethereumWeb3App/uploadFile.html", {'form': form})
     else:
         form = UploadFile()
         return render(request, "ethereumWeb3App/uploadFile.html", {'form': form})

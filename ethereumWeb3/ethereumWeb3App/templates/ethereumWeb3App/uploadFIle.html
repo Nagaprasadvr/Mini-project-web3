@@ -1,4 +1,4 @@
-{% extends "ethereumWeb3App/base.html" %}
+{% extends "ethereumWeb3App/base4.html" %}
     {% block code %}
 
     <style>
@@ -10,17 +10,25 @@
           text-decoration: none;
           display: inline-block;
           font-size: 16px;
-          margin: 4px 2px;
+          margin: 3px 2px;
           cursor: pointer;
         }
         .button2 {background-color: teal;}
+         th, td {
+        padding: 5px;
+        text-align: center;
+        }
+
+        tr:nth-child(even) {
+          background-color: #add8e6;
+        }
     </style>
     <br>
     <br>
     <form method="post" enctype="multipart/form-data">
       {% csrf_token %}
-      <div align = "center">
-          {{ form.as_p }}
+      <div class= "th" align = "center">
+          {{ form.as_table }}
       </div>
       <br>
       <br>
@@ -33,9 +41,6 @@
     <br>
     <br>
     <br>
-    <div align="center">
-    <a class="button button2 " href="{% url 'home' %}">Home</a>
-    </div>
 
 
 

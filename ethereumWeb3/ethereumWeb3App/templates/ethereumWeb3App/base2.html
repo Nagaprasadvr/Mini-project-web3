@@ -3,6 +3,28 @@
 {% load static %}
 <title>SECURE-DROP</title>
 <head>
+     <style>
+            .button {
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 3px 2px;
+          cursor: pointer;
+        }
+        .button2 {background-color: teal;}
+         th, td {
+        padding: 5px;
+        text-align: center;
+        }
+
+        tr:nth-child(even) {
+          background-color: #add8e6;
+        }
+    </style>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -35,10 +57,13 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
 </head>
 
 <body>
+
   <div class="wrap">
+
      <!-- ======= Header ======= -->
      <header id="header" class="d-flex align-items-center">
       <div class="container d-flex align-items-center justify-content-between">
@@ -52,12 +77,12 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link scrollto " href="{% url 'index' %}">Home</a></li>
-            <li><a class="nav-link scrollto " href="{% url 'Signup' %}">Signup</a></li>
-            <li><a class="nav-link scrollto" href="{% url 'login' %}">Login</a></li>
 
-            <li><a href="{% url 'logout' %}">Logout</a></li>
-            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a class="nav-link scrollto " href="{% url 'login' %}">Login</a> </li>
+            <li><a class="nav-link scrollto "href="{% url 'blog' %}">Blog</a></li>
             <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+
+
 
 
           </ul>
@@ -70,8 +95,14 @@
     {% block code %}
 
     {% endblock %}
-    </div>
+    <!-- ======= Hero Section ======= -->
 
+
+ <section>
+        <img src="{% static 'ethereumWeb3App/assets/img/homebase.jpg' %}" style="height:auto ;width:100%;">
+
+    </section><!-- End Hero -->
+    </div>
 </body>
 
 </html>

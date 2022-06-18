@@ -577,6 +577,12 @@ section {
   background-size: cover;
   padding: 60px 0;
 }
+.cta1 {
+  background: url("../img/homebase.jpg") ;
+  background-size: cover;
+  background-align: center;
+  padding: 60px 0;
+}
 .cta h3 {
   color: #fff;
   font-size: 28px;
@@ -805,6 +811,12 @@ section {
 .testimonials {
   padding: 80px 0;
   background: url("../img/homebase.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+.body {
+  background-image: url("../img/homebase.jpg")
   background-position: center center;
   background-size: cover;
   position: relative;
