@@ -1,3 +1,5 @@
+import os
+
 from django.test import TestCase
 from django.contrib import messages
 import json
@@ -51,20 +53,26 @@ def strongPassword(password: str):
         return False
 
 
+fil = "C:\\Users\\home\\PycharmProjects\\Web3\\Mini-project-web3\\ethereumWeb3\\ethereumWeb3App\\store.json"
+
+folder = os.path.dirname(os.path.abspath(__file__))
+my_file = os.path.join(folder, "store.json")
+
+
 def getAddress():
-    file = open("C:\\Users\\home\\PycharmProjects\\Web3\\Mini-project-web3\\ethereumWeb3\\ethereumWeb3App\\store.json", 'r')
+    file = open(my_file, 'r')
     jsonObj = json.load(file)
     file.close()
     return jsonObj['index']
 
 
 def updateAddress():
-    file = open("C:\\Users\\home\\PycharmProjects\\Web3\\Mini-project-web3\\ethereumWeb3\\ethereumWeb3App\\store.json", "r")
+    file = open(my_file, "r")
     jsonObj = json.load(file)
 
     jsonObj['index'] = jsonObj['index']+1
     file.close()
-    file = open("C:\\Users\\home\\PycharmProjects\\Web3\\Mini-project-web3\\ethereumWeb3\\ethereumWeb3App\\store.json", "w")
+    file = open(my_file, "w")
     json.dump(jsonObj,file)
     file.close()
     return jsonObj['index']
