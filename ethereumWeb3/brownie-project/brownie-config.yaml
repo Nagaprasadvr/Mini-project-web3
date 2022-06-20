@@ -1,4 +1,3 @@
 dotenv: .env
 wallets:
-  key1: ${PRIVATE_KEYpub1}
-contracts : ${contractpath}
+  from_key: ${PRIVATE_KEY}

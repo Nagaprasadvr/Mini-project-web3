@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ac8a62c9-9b07-47cf-9a42-1513315fb6a5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contracts/IpfsHash.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ethereumWeb3App/ipfsPinata.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/documents/passport.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../media/documents/passport_04lasve.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brownie-config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/brownie-config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/IpfsHashContract.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/deploy.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ethereumWeb3/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ethereumWeb3/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ethereumWeb3/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ethereumWeb3/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ethereumWeb3App/store.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ethereumWeb3App/store.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ethereumWeb3App/templates/ethereumWeb3App/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ethereumWeb3App/templates/ethereumWeb3App/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ethereumWeb3App/templates/ethereumWeb3App/uploadFIle.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ethereumWeb3App/templates/ethereumWeb3App/uploadFIle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ethereumWeb3App/templates/ethereumWeb3App/userview.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ethereumWeb3App/templates/ethereumWeb3App/userview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ethereumWeb3App/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ethereumWeb3App/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/1SI19CS078_SSCD_1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/buildspace1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/buildspace2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/buildspace3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/buildspace3_1Jkgksk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/decen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/filecoin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/idol.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/ieeenew.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/metamask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/metamask_1f7pxCx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/metamask_7SS7zeU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/metamask_8kpFfWn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/metamask_Lp8Oxes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/metamask_M8mX7Bf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/metamask_PPV2gk1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/metamask_PxEVZQ7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/metamask_ZAx7vTS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/metamask_biMcABe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/passportsol.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../media/documents/wallpa.jpg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="m433e38y" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AnGdS1C6p4V1BolmRtvX7ebiD3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac8a62c9-9b07-47cf-9a42-1513315fb6a5" name="Changes" comment="" />
+      <created>1655638023229</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655638023229</updated>
+    </task>
+    <servers />
+  </component>
+</project>
