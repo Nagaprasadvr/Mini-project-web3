@@ -1,4 +1,5 @@
 import requests.exceptions
+import os
 from django.shortcuts import render
 from .forms import CreateUserForm, UploadFile
 from django.shortcuts import redirect
@@ -7,6 +8,7 @@ from django.contrib.auth import authenticate, login, logout
 from .tests import passMatch, passLength, emailValidity, strongPassword,getAddress,updateAddress
 from .models import User
 import hashlib as hash
+from .ipfsPinata import upload
 from requests.exceptions import ConnectionError
 from web3 import Web3
 from django.contrib.auth.decorators import login_required
@@ -119,6 +121,7 @@ def userView(request, userkey):
     ganacheConnect()
     if w3.isConnected():
         balance =w3.fromWei(w3.eth.get_balance(addr),"ether")
+
         return render(request, "ethereumWeb3App/userview.html", {"userkey": userkey[0:32],
                                                              "address":addr,
                                                              "balance":balance,
@@ -129,15 +132,28 @@ def userView(request, userkey):
 
 @login_required(login_url='login/')
 def Upload(request):
+    flag = 0
     if request.method == 'POST':
+        flag = 1
+        file = request.FILES['document']
+        filename = file.name
+        fileType = file.content_type
+        fileSize = file.size
+        print(filename)
+        flag = 0
         form = UploadFile(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-        form = UploadFile()
-        return render(request,"ethereumWeb3App/uploadFile.html", {'form': form})
+            path = "media/documents/"+filename
+            res = upload(path,filename)
+            messages.info(request,"File has been successfully Uploaded")
+        u = User.objects.get(username=request.user)
+        userk = u.userKey
+
+        return redirect('userView',userk)
     else:
         form = UploadFile()
-        return render(request, "ethereumWeb3App/uploadFile.html", {'form': form})
+        return render(request, "ethereumWeb3App/uploadFile.html", {'form': form,'flag':flag})
 
 
 def blog(request):

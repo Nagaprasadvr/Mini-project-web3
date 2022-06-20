@@ -1,11 +1,12 @@
-from brownie import accounts, config, IpfsHashContract
+import os
+
+from brownie import accounts, config
 
 
-def deploy():
-    account = accounts.add(config["wallets"]["key1"])
-    IpfsHashContract.deploy({"from":account})
-    print(account)
+def deploy_con():
+    account = accounts[0]
+    print(config["wallets"]["from_key"])
 
 
 def main():
-    deploy()
+    deploy_con()

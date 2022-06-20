@@ -1,7 +1,7 @@
 {% extends "ethereumWeb3App/base4.html" %}
     {% block code %}
 
-    <style>
+<style xmlns="http://www.w3.org/1999/html">
             .button {
           border: none;
           color: white;
@@ -32,12 +32,25 @@
       </div>
       <br>
       <br>
+      <div align="center">
+          {% if flags %}
+                {% for message in messages %}
+				<br>
+					<h1 style="color:teal; font-size:20px;" align="middle"><b>{{message}}</b></h1>
+                <br>
+				{% endfor %}
+          {% endif %}
 
+      </div>
       <div align="center">
       <input class="button button2 " type="submit" value="Upload">
        </div>
 
+
+
+
     </form>
+
     <br>
     <br>
     <br>

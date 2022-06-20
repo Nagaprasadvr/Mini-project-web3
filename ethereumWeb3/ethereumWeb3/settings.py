@@ -52,7 +52,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ethereumWeb3.urls'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # media directory in the root directory
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 
 
 TEMPLATES = [
