@@ -57,7 +57,8 @@ fil = "C:\\Users\\home\\PycharmProjects\\Web3\\Mini-project-web3\\ethereumWeb3\\
 
 folder = os.path.dirname(os.path.abspath(__file__))
 my_file = os.path.join(folder, "store.json")
-
+folder = os.path.dirname(os.path.abspath(__file__))
+db = os.path.join(folder, "base.json")
 
 def getAddress():
     file = open(my_file, 'r')
@@ -77,7 +78,23 @@ def updateAddress():
     file.close()
     return jsonObj['index']
 
+def getindex():
+    file = open(db, 'r')
+    jsonObj = json.load(file)
+    file.close()
+    return jsonObj['index']
 
+
+def updateindex():
+    file = open(db, "r")
+    jsonObj = json.load(file)
+
+    jsonObj['index'] = jsonObj['index']+1
+    file.close()
+    file = open(db, "w")
+    json.dump(jsonObj,file)
+    file.close()
+    return jsonObj['index']
 
 
 

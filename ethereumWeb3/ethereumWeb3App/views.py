@@ -5,8 +5,8 @@ from .forms import CreateUserForm, UploadFile
 from django.shortcuts import redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from .tests import passMatch, passLength, emailValidity, strongPassword,getAddress,updateAddress
-from .models import User
+from .tests import passMatch, passLength, emailValidity, strongPassword,getAddress,updateAddress,updateindex,getindex
+from .models import User, UserData
 import hashlib as hash
 from .ipfsPinata import upload
 from requests.exceptions import ConnectionError
@@ -146,7 +146,14 @@ def Upload(request):
             form.save()
             path = "media/documents/"+filename
             res = upload(path,filename)
-            messages.info(request,"File has been successfully Uploaded")
+            ipfshash = res['rows'][0]['ipfs_pin_hash']
+            gateway = "https://gateway.pinata.cloud/ipfs/"
+            url = gateway+ipfshash
+            user = User.objects.get(username=request.user)
+            d = UserData(index=getindex(),user=user,AssetName=filename, IpfsUrl=url,TypeOfData=fileType,IpfsHash=ipfshash,UploadTnxHash="0x12365")
+            d.save()
+            updateindex()
+            messages.info(request, "File has been successfully Uploaded ")
         u = User.objects.get(username=request.user)
         userk = u.userKey
 
@@ -155,6 +162,16 @@ def Upload(request):
         form = UploadFile()
         return render(request, "ethereumWeb3App/uploadFile.html", {'form': form,'flag':flag})
 
+@login_required(login_url='login/')
+def history(request):
+    u = User.objects.get(username=request.user)
+    d = UserData.objects.filter(user=u)
+    context={
+        "file": d
+    }
+    return render(request, "ethereumWeb3App/history.html", context)
+
 
 def blog(request):
+
     return render(request, "ethereumWeb3App/blog.html")

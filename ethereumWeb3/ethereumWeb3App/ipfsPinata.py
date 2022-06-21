@@ -19,5 +19,5 @@ def upload(filepath,filename):
     json_s = json.dumps(res2)
     j = json.loads(json_s)
     return j
-
-
+#r = upload("../media/documnets/Muskan6.docx","Muskan6.docx")
+#print(r['rows'][0]['ipfs_pin_hash'])

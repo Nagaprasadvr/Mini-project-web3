@@ -17,11 +17,12 @@ class User(models.Model):
 class UserData(models.Model):
     index = models.IntegerField(serialize=True,default=0)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-
+    AssetName = models.CharField(max_length=100,null=True)
+    IpfsUrl = models.CharField(max_length=100,null=True)
     TypeOfData = models.CharField(max_length=100, null=True, blank=True)
     IpfsHash = models.CharField(primary_key=True,max_length=100, unique=True, null=False , default="")
-    TimeStamp = models.DateTimeField(auto_now_add=False,unique=True, null=True, blank=True)
-    UploadTnxHash = models.CharField(max_length=100, null=True,unique=True, blank=True)
+    TimeStamp = models.DateTimeField(auto_now_add=True,unique=True,null=True)
+    UploadTnxHash = models.CharField(max_length=100, null=True,unique=False, blank=True,default="123")
 
     def __str__(self):
         return self.IpfsHash
