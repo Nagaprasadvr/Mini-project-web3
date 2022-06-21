@@ -6,24 +6,25 @@
     <table class="table table-striped table-sm">
       <thead>
         <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Product line</th>
-          <th scope="col">Segment Name</th>
-          <th scope="col">Owner</th>
-          <th scope="col">Details</th>
-          <th scope="col">Check</th>
+          <th style="color:teal;" scope="col"><b>Index</b></th>
+          <th style="color:teal;" scope="col"><b>Owner</b></th>
+          <th style="color:teal;" scope="col"><b>TypeOfData</b></th>
+          <th style="color:teal;" scope="col">Ipfs-CID</th>
+          <th style="color:teal;" scope="col"><b>TimeStamp</b></th>
+          <th style="color:teal;" scope="col"><b>TnxHash</b></th>
+          <th style="color:teal;" scope="col"><b>AssetLink</b></th>
         </tr>
       </thead>
       <tbody>
         {% for row in file %}
           <tr>
-            <td class="col">{{ row.index }}</td>
-            <td scope="col">{{ row.user }}</td>
-            <td scope="col">{{ row.TypeOfData }}</td>
-            <td scope="col">{{ row.IpfsHash }}</td>
-            <td scope="col">{{ row.TimeStamp }}</td>
-             <td scope="col">{{ row.UploadTnxHash }}</td>
-            <td scope="col">https://gateway.pinata.cloud/ipfs/{{ row.IpfsHash }}</td>
+            <td style="color:teal;" scope="col"><b>{{ row.index }}</b></td>
+            <td style="color:teal;" scope="col"><b>{{ row.user }}</b></td>
+            <td style="color:teal;" scope="col"><b>{{ row.TypeOfData }}</b></td>
+            <td style="color:teal;" scope="col"><b>{{ row.IpfsHash }}</b></td>
+            <td style="color:teal;" scope="col"><b>{{ row.TimeStamp }}</b></td>
+            <td style="color:teal;" scope="col"><b>{{ row.UploadTnxHash }}</b></td>
+            <td style="color:teal;" scope="col"><a style="color:teal;" href="https://gateway.pinata.cloud/ipfs/{{ row.IpfsHash }}"><b>ipfs-link</b></a></td>
 
 
           </tr>
