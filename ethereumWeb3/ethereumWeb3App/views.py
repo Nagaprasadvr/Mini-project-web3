@@ -8,9 +8,10 @@ from django.contrib.auth import authenticate, login, logout
 from .tests import passMatch, passLength, emailValidity, strongPassword,getAddress,updateAddress,updateindex,getindex
 from .models import User, UserData
 import hashlib as hash
-from .ipfsPinata import upload
+from .ipfsPinata import upload, remove
 from requests.exceptions import ConnectionError
 from web3 import Web3
+from .blockchain import deployCon,store,fetch
 from django.contrib.auth.decorators import login_required
 ganache = "http://127.0.0.1:8545"
 
@@ -24,7 +25,7 @@ def ganacheConnect():
 
 # Create your views here.
 
-
+con = deployCon()
 
 def hashing(str1:str, str2:str)->str:
     res = str1+str2
@@ -147,12 +148,24 @@ def Upload(request):
             path = "media/documents/"+filename
             res = upload(path,filename)
             ipfshash = res['rows'][0]['ipfs_pin_hash']
+            data = UserData.objects.all()
+
+            for i in data:
+                if ipfshash==i.IpfsHash:
+                    remove(ipfshash)
+                    messages.info(request,"Ownership already exists in blockchain , cannot upload")
+                    u = User.objects.get(username=request.user)
+                    userk = u.userKey
+                    return redirect('userView',userk)
             gateway = "https://gateway.pinata.cloud/ipfs/"
             url = gateway+ipfshash
             user = User.objects.get(username=request.user)
-            d = UserData(index=getindex(),user=user,AssetName=filename, IpfsUrl=url,TypeOfData=fileType,IpfsHash=ipfshash,UploadTnxHash="0x12365")
+            addr = user.pubAddress
+            tx = store(con, address=addr, hash=ipfshash)
+            d = UserData(index=getindex(),user=user,AssetName=filename, IpfsUrl=url,TypeOfData=fileType,IpfsHash=ipfshash,UploadTnxHash=tx)
             d.save()
             updateindex()
+
             messages.info(request, "File has been successfully Uploaded ")
         u = User.objects.get(username=request.user)
         userk = u.userKey
@@ -166,7 +179,7 @@ def Upload(request):
 def history(request):
     u = User.objects.get(username=request.user)
     d = UserData.objects.filter(user=u)
-    context={
+    context = {
         "file": d
     }
     return render(request, "ethereumWeb3App/history.html", context)

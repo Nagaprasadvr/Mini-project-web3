@@ -7,7 +7,7 @@ address payable public admin ;
 uint256 payAmountinWei = 100000000000000;
 constructor()
 {
-    admin = payable(0x6d349a6fEc2c919d71F6659cD63a3c28053B9ce8);
+    admin = payable(0x9F7b18A0F6D25461a5F3FDD2Be2cb418022Ec63D);
 
 }
 

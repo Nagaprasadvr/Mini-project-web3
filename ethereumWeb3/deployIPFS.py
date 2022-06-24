@@ -1,33 +1,16 @@
 from web3 import Web3
 from solcx import compile_standard, install_solc
 import json
+from eth_account.hdaccount import HDPath,seed_from_mnemonic
 
 abi = None
 bytecode = None
 ganache = "http://127.0.0.1:8545"
 w3 = Web3(Web3.HTTPProvider(ganache))
 chain_id = 1337
-sender_prvkey = "0xd010b5689cd9930827f095382ef4cba427de97d318a6877ed8a3573ef16b41f8"
-sender = "0x1AE44c9f7850457C4367eCc33a5f758124Bb8cb6"
-hash = "QmfCU7Hm5uCDoeKcN8AenawxMCKhuyMNmq3hW9cU3jTWGk"
-admin_address = "0x6d349a6fEc2c919d71F6659cD63a3c28053B9ce8"
-admin_prvkey = "0x366596169205a172559de4501facc84cfff0212076044feb938424d24528f84e"
-private_key = "0xd010b5689cd9930827f095382ef4cba427de97d318a6877ed8a3573ef16b41f8"
-nonce = w3.eth.getTransactionCount(admin_address)
-transDeployDict = {
-        "chainId": chain_id,
-        "gasPrice": w3.eth.gas_price,
-        "from": admin_address,
-        "nonce": nonce,
-    }
-transDict = {
-    "chainId": chain_id,
-    "gasPrice": w3.eth.gas_price,
-    "from": sender,
-    "nonce": nonce,
-
-}
-
+admin_address = "0x9F7b18A0F6D25461a5F3FDD2Be2cb418022Ec63D"
+admin_prvkey = "0xb11bdef9cf329ca9670d23410e41e5621a6c29b3cd18c6d6c7f579aabe17b6c1"
+hdpath = HDPath("m/44'/60'/0'/0/account_index")
 
 def compileContract():
 
@@ -69,12 +52,18 @@ def compileContract():
 
 
 def deployContract():
-
+    nonce = w3.eth.getTransactionCount(admin_address)
+    transDeployDict = {
+        "chainId": chain_id,
+        "gasPrice": w3.eth.gas_price,
+        "from": admin_address,
+        "nonce": nonce,
+    }
     IpfsHash = w3.eth.contract(abi=abi, bytecode=bytecode)
     # Submit the transaction that deploys the contract
     transaction = IpfsHash.constructor().buildTransaction(transDeployDict)
     # Sign the transaction
-    signed_txn = w3.eth.account.sign_transaction(transaction, private_key=admin_prvkey)
+    signed_txn = w3.eth.account.sign_transaction(transaction,private_key=admin_prvkey)
     print("Deploying Contract!")
     # Send it!
     tx_hash = w3.eth.send_raw_transaction(signed_txn.rawTransaction)
@@ -85,28 +74,26 @@ def deployContract():
     return IpfsHashtx
 
 
-def StoreIpfsHash(address:str, hash:str):
-    global nonce
-    nonce = w3.eth.getTransactionCount(sender)
-    global transDict
-    transDict["nonce"] = nonce
+def StoreIpfsHash(IpfsHashCon,address:str, hash:str):
+    nonce = w3.eth.getTransactionCount(address)
+    transDict = {
+        "chainId": chain_id,
+        "gasPrice": w3.eth.gas_price,
+        "from": address,
+        "nonce": nonce,
+
+    }
     create = IpfsHashCon.functions.StoreIpfsHash(address,hash).buildTransaction(transDict)
-    signTnx = w3.eth.account.sign_transaction(create,sender_prvkey)
+    signTnx = w3.eth.account.sign_transaction(create)
     TnxSent = w3.eth.send_raw_transaction(signTnx.rawTransaction)
     TnxReceipt = w3.eth.wait_for_transaction_receipt(TnxSent)
+    return TnxSent
 
 
-def FetchIpfsHash(address):
+def FetchIpfsHash(IpfsHashCon,address:str):
     Ipfshash = IpfsHashCon.functions.FetchIpfsHash(address).call()
     print(Ipfshash)
     return Ipfshash
 
-compileContract()
-IpfsHashCon = deployContract()
-
-StoreIpfsHash(sender,hash)
-cid = FetchIpfsHash(sender)
 
 
-url: str = "https://ipfs.io/ipfs/"+cid
-print(url)

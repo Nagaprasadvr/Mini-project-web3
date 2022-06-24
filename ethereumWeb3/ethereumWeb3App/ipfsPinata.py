@@ -21,3 +21,7 @@ def upload(filepath,filename):
     return j
 #r = upload("../media/documnets/Muskan6.docx","Muskan6.docx")
 #print(r['rows'][0]['ipfs_pin_hash'])
+
+def remove(hash:str):
+    pinata = PinataPy(pinata_api_key=apiToken, pinata_secret_api_key=apiSecret)
+    pinata.remove_pin_from_ipfs(hash)
