@@ -2,7 +2,7 @@
 pragma solidity >=0.6.0 <=0.9.0;
 
 contract IpfsHashContract{
-mapping(address=> string) public EthIpfs;
+mapping(address=> string[]) public EthIpfs;
 address payable public admin ;
 uint256 payAmountinWei = 100000000000000;
 constructor()
@@ -13,13 +13,13 @@ constructor()
 
 function StoreIpfsHash(address payable sender,string memory IpfsHash)public payable {
 payable(address(this)).send(payAmountinWei);
-EthIpfs[sender] = IpfsHash;
+EthIpfs[sender].push(IpfsHash);
 require(sender.balance>=payAmountinWei);
 admin.send(payAmountinWei);
 
 }
 
-function FetchIpfsHash(address user)public view returns(string memory){
+function FetchIpfsHash(address user)public view returns(string[] memory){
     return (EthIpfs[user]);
 }
 

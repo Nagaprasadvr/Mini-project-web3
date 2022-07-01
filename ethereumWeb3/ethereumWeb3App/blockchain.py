@@ -13,6 +13,7 @@ def deployCon():
 
 def store(con,address,hash):
     tx:str = bs.run("scripts/deploy.py",method_name="storeIpfs",kwargs={"IpfsContract":con,"address":address,"hash":hash})
+
     a = ""
     for i in tx:
         if i.isalnum() and i!="m":
@@ -20,4 +21,4 @@ def store(con,address,hash):
     return a[12:]
 
 def fetch(con,address):
-    bs.run("scripts/deploy.py",method_name="fetchIpfs",kwargs={"IpfsContract":con,"address":address})
+    return bs.run("scripts/deploy.py",method_name="fetchIpfs",kwargs={"IpfsContract":con,"address":address})

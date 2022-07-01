@@ -1,31 +1,43 @@
-{% extends "ethereumWeb3App/base2.html" %}
+{% extends "ethereumWeb3App/base5.html" %}
     {% block code %}
+    {% load static %}
+<html>
+<head>
 
-        <html lang="en" xmlns="http://www.w3.org/1999/html">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport"
-                  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <title>BLOG</title>
-        </head>
-        <body>
-        <h1 style="ali">ABOUT OUR PROJECT...</h1>
-            <p>Our project aims at decentralisation of file storage by using multiple servers enabled by the IPFS and blockchain technology</p>
-            <h2>Project description</h2>
-            The data (in this case confidential documents) through the website and stored in <strong>IPFS</strong> networkusing python back-end server. The IPFS hash is obtained and a transaction is created to store IPFS hash in the blockchain.Ether is paid to process the transaction.
-            Smart Contracts are coded and compiled using solidity language. These smart contracts are deployed using the transaction by paying the ethers.<br>If the transaction is successful the  smart contract is stored on ehtereum virtual machine.
-            This IPFS hash is also stored on the local blockchain. Here we us local ethereum blockchain called Ganache. Ganache runs on ethereum blockchain and provides a testing environment.
-        <br></p>
-        <h2>TOOLS USED</h2>
-            <ol>
+    </style>
+    <link rel="stylesheet" href="blog-overview.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td style="width:50%">
+              <img src="{% static 'ethereumWeb3App/assets/img/homebase.jpg' %}" style="width:100%;">
+            </td>
+            <td>
+                <div class="p-3" class="m-0 p-0" style="background-color:#02082b;color:white;justify-content:justify;">
+                <h1 class="m-0 p-0">ABOUT OUR PROJECT...</h1>
+                <br>
+                <p style="font-size: 20px;">Our project aims at decentralisation of file storage by using multiple servers enabled by the IPFS and blockchain technology</p>
+                <h2>Project description</h2>
+                <p style="font-size: 20px;" style="text-align: justify;">
+                The data (in this case confidential documents) through the website and stored in <strong>IPFS</strong> network using python back-end server. The IPFS hash is obtained and a transaction is created to store IPFS hash in the blockchain.Ether is paid to process the transaction.Smart Contracts are coded and compiled using solidity language. These smart contracts are deployed using the transaction by paying the ethers.<br>If the transaction is successful the  smart contract is stored on Ethereum blockchain.This IPFS hash is also stored on the local blockchain. Here we us local ethereum blockchain called Ganache. Ganache runs on ethereum blockchain and provides a testing environment.
+                </p>
+                    <h2>TOOLS USED</h2>
+                <ol style="font-size:20px;">
                 <li>Ethereum Blockchain</li>
                 <li>IPFS network: Inter Planetary File System </li>
                 <li>Ganache : Local ethereum blockchain node </li>
-                <li>React JS: For dynamic frontend interaction</li>
                 <li>Solidity: Smart Contracts language</li>
                 <li>Django Framework: Python backend server</li>
             </ol>
-        </body>
-        </html>
+
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
 {% endblock %}

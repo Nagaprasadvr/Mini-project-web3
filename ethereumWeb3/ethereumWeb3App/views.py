@@ -6,7 +6,7 @@ from django.shortcuts import redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from .tests import passMatch, passLength, emailValidity, strongPassword,getAddress,updateAddress,updateindex,getindex
-from .models import User, UserData
+from .models import *
 import hashlib as hash
 from .ipfsPinata import upload, remove
 from requests.exceptions import ConnectionError
@@ -17,15 +17,14 @@ ganache = "http://127.0.0.1:8545"
 
 w3 = None
 
+
 def ganacheConnect():
     global w3
     w3 = Web3(Web3.HTTPProvider(ganache))
 
 
-
-# Create your views here.
-
 con = deployCon()
+
 
 def hashing(str1:str, str2:str)->str:
     res = str1+str2
@@ -65,6 +64,7 @@ def registerPage(request):
     flag2 = 0
     flag3 = 0
     flag4 = 0
+    flag5 = 0
     ganacheConnect()
     if not w3.isConnected():
         return render(request,"ethereumWeb3App/ganache.html")
@@ -83,10 +83,14 @@ def registerPage(request):
         flag2 = passLength(password=pass1)
         flag3 = passMatch(pass1, pass2)
         flag4 = strongPassword(pass1)
-
+        user = User.objects.all()
+        for i in user:
+            if i.username==username:
+                flag5 = 1
+                break
         print(flag3)
-        if flag1 == 1 and flag2 == 1 and flag3 == 1 and flag4 == 1:
-            messages.success(request, "Account was created for :" + username)
+        if flag1 == 1 and flag2 == 1 and flag3 == 1 and flag4 == 1 and flag5==0:
+            messages.success(request, "Account was created for : " + username)
             form.username = username
             form.email = email
             form.password1 = pass1
@@ -108,7 +112,8 @@ def registerPage(request):
             messages.info(request, "Passwords don't match")
         elif flag4 == 0:
             messages.info(request, "Weak password - Include numbers , Uppercase and special characters in password")
-
+        elif flag5==1:
+            messages.info(request, "User already exists! cannot create user")
     return render(request, "ethereumWeb3App/register.html", {})
 
 
@@ -146,7 +151,12 @@ def Upload(request):
         if form.is_valid():
             form.save()
             path = "media/documents/"+filename
-            res = upload(path,filename)
+            res = None
+            try:
+                res = upload(path,filename)
+            except ConnectionError:
+                return render(request,"ethereumWeb3app/ipfserror.html")
+
             ipfshash = res['rows'][0]['ipfs_pin_hash']
             data = UserData.objects.all()
 
@@ -162,9 +172,12 @@ def Upload(request):
             user = User.objects.get(username=request.user)
             addr = user.pubAddress
             tx = store(con, address=addr, hash=ipfshash)
+            hh:list = fetch(con,address=addr)
+            print(hh)
             d = UserData(index=getindex(),user=user,AssetName=filename, IpfsUrl=url,TypeOfData=fileType,IpfsHash=ipfshash,UploadTnxHash=tx)
             d.save()
             updateindex()
+            os.remove("media/documents/"+filename)
 
             messages.info(request, "File has been successfully Uploaded ")
         u = User.objects.get(username=request.user)
@@ -179,8 +192,9 @@ def Upload(request):
 def history(request):
     u = User.objects.get(username=request.user)
     d = UserData.objects.filter(user=u)
+
     context = {
-        "file": d
+        "file": d,
     }
     return render(request, "ethereumWeb3App/history.html", context)
 
@@ -188,3 +202,19 @@ def history(request):
 def blog(request):
 
     return render(request, "ethereumWeb3App/blog.html")
+
+def saveenquiry(request):
+    print('hello')
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        en = contactEnquiry(name=name, email=email, subject=subject, message=message)
+        en.save()
+        context={
+            'n':"Thanks for reaching us"
+        }
+        return render(request, "ethereumWeb3App/contact.html", context)
+
+    return render(request, "ethereumWeb3App/contact.html")

@@ -3,6 +3,26 @@
 {% load static %}
 <title>SECURE-DROP</title>
 <head>
+  <style>
+    .runningtxt{
+    width:100%;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.beechmei{
+  font-size:40px;
+  font-weight:bold;
+  font-style:italic;
+  color:teal;
+  position: absolute;
+  top:1%;
+  left:10%;
+  right:30%
+  transform: translate(-50%, -50%);
+}
+  </style>
+
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -15,7 +35,7 @@
   <link href="{% static 'ethereumWeb3App/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  
+
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -38,7 +58,7 @@
 </head>
 
 <body>
-  <div class="wrap">
+  <div >
      <!-- ======= Header ======= -->
      <header id="header" class="d-flex align-items-center">
       <div class="container d-flex align-items-center justify-content-between">
@@ -64,12 +84,25 @@
       </div>
     </header><!-- End Header -->
     <!-- ======= Hero Section ======= -->
-    <section>
+    <br>
+    <br>
+    <section >
+      <div class="runningtxt">
+        <br>
+    <br>
+    <br>
+    <br>
         <img src="{% static 'ethereumWeb3App/assets/img/homebase.jpg' %}" style="height:auto ;width:100%;">
-    
-    </section><!-- End Hero -->
+        <div class="beechmei"><marquee behavior="scroll" direction="left"  >Store your Digital assets securely on IPFS Network using Blockchain Network</marquee>
+        </div>
+      </div>
 
-   
+
+
+
+     </section><!-- End Hero -->
+
+
 
     <main id="main">
 
@@ -94,80 +127,68 @@
         </div>
       </section><!-- End Clients Section -->
 
-      <!-- ======= Features Section ======= -->
-      <section id="features" class="features">
 
 
-
-
-      </section><!-- End Features Section -->
-
-      <!-- ======= Cta Section ======= -->
-      <section id="cta" class="cta">
-        <div class="container">
-
-          <div class="text-center" data-aos="zoom-in">
-            <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a class="cta-btn" href="#">Call To Action</a>
-          </div>
-
-        </div>
-      </section><!-- End Cta Section -->
 
       <!-- ======= Services Section ======= -->
-      <section id="services" class="services">
+      <section id="services" class="services" style="background-color:white">
         <div class="container">
 
           <div class="section-title" data-aos="fade-down">
-            <span>Services</span>
-            <h2>Services</h2>
-            <p>We provide Decentralized data storing service for any form of data like image , files , video , website etc..</p>
+            <span style="color:teal">Services</span>
+            <br>
+            <br>
+            <br>
+            <p style="color:teal; font-size:20px" ><strong>We provide Decentralized data storing service for any form of data like image , files , video , website etc..</strong></p>
           </div>
+          <br>
+          <br>
 
-          <div class="row">
-            <div class="col-md-6">
+          <div class="row" >
+            <div class="col-md-6 ">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                 <i class="bi bi-shield-check" style="
-                color: #0ea5e0;"></i>
-                <h4><a href="#"> Decentralized web hosting</a></h4>
-                <p>The data uploaded is stored on local Blockchain network</p>
+                color:teal;"></i>
+                <h4 style="color:teal"><a style="color:teal" href="#"> Digital assets storage</a></h4>
+                <p>The data uploaded is stored on IPFS network</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
                 <i class="bi bi-images" style="color: #07cc70;"></i>
-                <h4><a href="#">Upload Image</a></h4>
-                <p>Upload your image securley using IPFS</p>
+                <h4 style="color:teal"><a style="color:teal" href="{% url 'Signup' %}">Upload Image</a></h4>
+                <p style="color:teal">Upload your image securley using IPFS</p>
               </div>
             </div>
             <div class="col-md-6">
+
               <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-folder-check" style="color: #e40373;"></i>
-                <h4><a href="#">Upload File</a></h4>
-                <p>Upload your file Securely using IPFS</p>
+                <h4 style="color:teal"><a style="color:teal" href="{% url 'Signup' %}">Upload File</a></h4>
+                <p style="color:teal">Upload your file Securely using IPFS</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
                 <i class="bi bi-code" style="color: #f0b103;"></i>
-                <h4><a href="#">Upload Project code </a></h4>
-                <p>Upload your project code securely using IPFS</p>
+                <h4 style="color:teal"><a style="color:teal" href="{% url 'Signup' %}">Upload Project code </a></h4>
+                <p style="color:teal">Upload your project code securely using IPFS</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
                 <i class="bi bi-play-circle" style="color: #3145fa;"></i>
-                <h4><a href="#">Upload Video</a></h4>
-                <p>Upload your video securely using IPFS
+                <h4 style="color:teal"><a style="color:teal" href="{% url 'Signup' %}">Upload Video</a></h4>
+                <p style="color:teal">Upload your video securely using IPFS
                 </p>
+                <br>
               </div>
             </div>
             <div class="col-md-6">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
                 <i class="bi bi-patch-check-fill" style="color: #a00098;"></i>
-                <h4><a href="#">Secure your data</a></h4>
-                <p>The decentralization provides the security for the data with no third party involvement</p>
+                <h4 style="color:teal"><a style="color:teal" href="{% url 'Signup' %}">Secure your data</a></h4>
+                <p style="color:teal">The decentralization provides the security for the data with no third party involvement</p>
               </div>
             </div>
           </div>
@@ -195,47 +216,32 @@
               <div class="info-box">
                 <i class="bx bx-map"></i>
                 <h3>Our Address</h3>
-                <p> SIT, BH road Tumakuru</p>
+                <p> Siddaganga Institute of Technology, BH road Tumakuru</p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
               <div class="info-box">
                 <i class="bx bx-envelope"></i>
                 <h3>Email Us</h3>
-                <p>info@example.com<br>contact@example.com</p>
+                <p>securedrop@gmail.com<br></p>
+                <br>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
               <div class="info-box">
                 <i class="bx bx-phone-call"></i>
                 <h3>Call Us</h3>
-                <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                <p>9686494320<br></p>
+                <br>
               </div>
             </div>
           </div>
 
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="row">
-              <div class="col-md-6 form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-              </div>
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-              </div>
+         <div class="text-center">
+              <br>
+              <br>
+              <a href="{% url 'saveenquiry' %}" class="btn btn-success">SEND YOUR QUERY</a>
             </div>
-            <div class="form-group mt-3">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-            </div>
-            <div class="form-group mt-3">
-              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-            </div>
-            <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-          </form>
 
         </div>
       </section><!-- End Contact Us Section -->
@@ -255,8 +261,8 @@
               <h3>SECURE-DROP</h3>
               <p>
                 SIT, BH road Tumkur <br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                <strong>Phone:</strong>9686499320<br>
+                <strong>Email:</strong> securedrop@gmail.com<br>
               </p>
             </div>
 
@@ -274,7 +280,7 @@
             <div class="col-lg-3 col-md-6 footer-links">
               <h4>Our Services</h4>
               <ul>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Decentralized web hosting</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Decentralized Digital assets storage</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="#">Upload image,video,document,etc..</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="#">Secure your private files</a></li>
                 <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
@@ -283,7 +289,7 @@
 
             <div class="col-lg-3 col-md-6 footer-links">
               <h4>Our Social Networks</h4>
-              <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+              <p>Follow us for more updates and information</p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
